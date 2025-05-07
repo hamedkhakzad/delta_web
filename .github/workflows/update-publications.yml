@@ -30,10 +30,10 @@ jobs:
         run: |
           if [ -f requirements.txt ]; then
             pip install --upgrade pip
-            pip install -r requirements.txt
+            pip install scholarly
           fi
 
-      - name: Run publication‐fetch script
+      - name: Run publication-fetch script
         run: python fetch_publications.py
 
       - name: Commit & push changes
