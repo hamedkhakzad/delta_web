@@ -1,15 +1,6 @@
 # delta_web
  
-Last website meeting Feb 28 
+Last website meeting May 7th 2025
 
-- Software section
-- Dedicated page for news + 
-- Landscape figure representative of the projects — protein dynamics 
-
-Sneeha on previous
-Add victor
-Ishalla
-
-Static dynamic page
-
-Fetch automatically from scholar
+- Dedicated page for Research section
+- Add missing past members
