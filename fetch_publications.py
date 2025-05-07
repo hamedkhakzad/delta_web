@@ -2,9 +2,18 @@ import json
 import os
 import re
 from scholarly import scholarly
+import time
+
 
 # Set a minimum publication year
 MIN_YEAR = 2018
+
+# Check if we already have recent data (less than 1 day old)
+if os.path.exists('data/publications.json'):
+    file_age = time.time() - os.path.getmtime('data/publications.json')
+    if file_age < 86400:  # 24 hours in seconds
+        print("Publications file is recent. Skipping fetch.")
+        exit(0)
 
 def parse_authors(author_str):
     """
@@ -62,10 +71,12 @@ def fetch_author_publications(author_id):
     """
     print(f"Fetching publications for author: {author_id}")
     author = scholarly.search_author_id(author_id)
+    time.sleep(3)  # 3-second delay
     author = scholarly.fill(author, sections=['publications'])
     
     publications = []
     for pub in author.get('publications', []):
+        time.sleep(3)  # 3-second delay
         pub_filled = scholarly.fill(pub)
         bib = pub_filled.get('bib', {})
         

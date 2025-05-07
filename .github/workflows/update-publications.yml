@@ -5,13 +5,13 @@ on:
   #  - 23:00 UTC = 00:00 CET (winter, UTC+1)
   #  - 22:00 UTC = 00:00 CEST (summer, UTC+2)
   schedule:
-    - cron: '0 23 * * *'
-    - cron: '0 22 * * *'
+    - cron: '0 23 * * 1'
   workflow_dispatch:  # optional: allows you to run it manually from the Actions tab
 
 jobs:
   update-publications:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # fail after 10 minutes
 
     steps:
       - name: Checkout repository
