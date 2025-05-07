@@ -28,10 +28,8 @@ jobs:
       - name: Install dependencies
         # if you have a requirements.txt; otherwise skip or install specific libs
         run: |
-          if [ -f requirements.txt ]; then
-            pip install --upgrade pip
-            pip install scholarly
-          fi
+          pip install --upgrade pip
+          pip install scholarly
 
       - name: Run publication-fetch script
         run: python fetch_publications.py
