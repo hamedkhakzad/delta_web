@@ -1,0 +1,50 @@
+name: Update Publications
+
+on:
+  # Schedule two UTC‐based cron jobs so that:
+  #  - 23:00 UTC = 00:00 CET (winter, UTC+1)
+  #  - 22:00 UTC = 00:00 CEST (summer, UTC+2)
+  schedule:
+    - cron: '0 23 * * *'
+    - cron: '0 22 * * *'
+  workflow_dispatch:  # optional: allows you to run it manually from the Actions tab
+
+jobs:
+  update-publications:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0        # get the full history (needed if you have branches/tag logic)
+          persist-credentials: true  # so the push step can authenticate automatically
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        # if you have a requirements.txt; otherwise skip or install specific libs
+        run: |
+          if [ -f requirements.txt ]; then
+            pip install --upgrade pip
+            pip install -r requirements.txt
+          fi
+
+      - name: Run publication‐fetch script
+        run: python fetch_publications.py
+
+      - name: Commit & push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/publications.json
+          # only commit if there are changes
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: nightly update of publications list"
+            git push
+          else
+            echo "No changes to commit"
+          fi
