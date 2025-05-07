@@ -1,0 +1,337 @@
+{
+  "publications": [
+    {
+      "title": "Communication pathway analysis within protein-nucleic acid complexes",
+      "authors": "Sneha Bheemireddy, Roy González Alemán, Emmanuelle Bignon, Yasaman Karami",
+      "year": "2025",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.02.14.638259.abstract",
+      "tags": []
+    },
+    {
+      "title": "The hinge-engineered IgG1-IgG3 hybrid subclass IgGh47 potently enhances Fc-mediated function of anti-streptococcal and SARS-CoV-2 antibodies",
+      "authors": "Arman Izadi, Yasaman Karami, Eleni Bratanis, Sebastian Wrighton, Hamed Khakzad, ..., Lars Malmström, Pontus Nordenfelt",
+      "year": "2024",
+      "journal": "Nature Communications",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41467-024-47928-8",
+      "tags": []
+    },
+    {
+      "title": "Streptolysin O accelerates the conversion of plasminogen to plasmin",
+      "authors": "Di Tang, Hamed Khakzad, Elisabeth Hjortswang, Lars Malmström, Simon Ekström, Lotta Happonen, Johan Malmström",
+      "year": "2024",
+      "journal": "Nature Communications",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41467-024-54173-6",
+      "tags": []
+    },
+    {
+      "title": "Mapping targetable sites on the human surfaceome for the design of novel binders",
+      "authors": "Ahmed Sadek, Anthony Marchand, Yi Yu, Jovan Damjanovic, Sandrine Georgeon, ..., Che Yang, Hamed Khakzad",
+      "year": "2024",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2024.12.16.628626.abstract",
+      "tags": []
+    },
+    {
+      "title": "IpaA reveals distinct modes of vinculin activation during Shigella invasion and cell-matrix adhesion",
+      "authors": "Benjamin Cocom, Hamed Khakzad, Mahamadou Konate, Daniel Isui Aguilar, Chakir Bello, ..., Delphine Javelaud, Guy Tran Van",
+      "year": "2024",
+      "journal": "Life Science Alliance",
+      "doi": "",
+      "link": "https://www.life-science-alliance.org/content/7/8/e202302418.abstract",
+      "tags": []
+    },
+    {
+      "title": "The hinge-engineered IgG1-IgG3 hybrid subclass IgGh47 potently enhances Fc-mediated function of anti-streptococcal and SARS-CoV-2 antibodies",
+      "authors": "Arman Izadi, Yasaman Karami, Eleni Bratanis, Sebastian Wrighton, Hamed Khakzad, ..., Lars Malmström, Pontus Nordenfelt",
+      "year": "2024",
+      "journal": "Nature Communications",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41467-024-47928-8",
+      "tags": []
+    },
+    {
+      "title": "Cysteine hyperoxidation rewires communication pathways in the nucleosome and destabilizes the dyad",
+      "authors": "Yasaman Karami, Emmanuelle Bignon",
+      "year": "2024",
+      "journal": "Computational and Structural Biotechnology Journal",
+      "doi": "",
+      "link": "https://www.sciencedirect.com/science/article/pii/S2001037024000795",
+      "tags": []
+    },
+    {
+      "title": "Subtle changes at the RBD/hACE2 interface during SARS-CoV2 variant evolution: a molecular dynamics study",
+      "authors": "Aria Gheeraert, Vincent Leroux, Dominique Mias, Yasaman Karami, Laurent Vuillon, ..., Bernard Maigret, Laurent Chaloin",
+      "year": "2024",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2024.12.12.628120.abstract",
+      "tags": []
+    },
+    {
+      "title": "Histone H3 as a redox switch in the nucleosome core particle: insights from molecular modeling†",
+      "authors": "Yasaman Karami, Roy González, Mailys Duch, Yuya Qiu, Yani Kedjar, Emmanuelle Bignon",
+      "year": "2024",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2024.10.07.616940.abstract",
+      "tags": []
+    },
+    {
+      "title": "De novo protein design by inversion of the AlphaFold structure prediction network",
+      "authors": "Benedict Wolf, Hamed Khakzad, Stéphane Rosset",
+      "year": "2023",
+      "journal": "Protein Science",
+      "doi": "",
+      "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/pro.4653",
+      "tags": []
+    },
+    {
+      "title": "A human monoclonal antibody bivalently binding two different epitopes in streptococcal M protein mediates immune function",
+      "authors": "Wael Bahnan, Lotta Happonen, Hamed Khakzad, Vibha Kumra Ahnlide, Sebastian Wrighton, ..., Johan Malmström, Pontus Nordenfelt",
+      "year": "2023",
+      "journal": "EMBO Molecular Medicine",
+      "doi": "",
+      "link": "https://www.embopress.org/doi/full/10.15252/emmm.202216208",
+      "tags": []
+    },
+    {
+      "title": "Shigella IpaA mediates actin bundling through diffusible vinculin oligomers with activation imprint",
+      "authors": "Cesar Valencia, Isui Aguilar, Hamed Khakzad, Benjamin Cocom, Charles Bou, ..., Lars Malmström, Guy Tran Van",
+      "year": "2023",
+      "journal": "Cell Reports",
+      "doi": "",
+      "link": "https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00416-3?uuid=uuid%3Accaf2b4a-dae9-4c55-8954-cd127ba20767",
+      "tags": []
+    },
+    {
+      "title": "Multienzyme deep learning models improve peptide de novo sequencing by mass spectrometry proteomics",
+      "authors": "Carlos Gueto, Di Tang, Lotta Happonen, Moritz Heusel, Hamed Khakzad, Johan Malmström, Lars Malmström",
+      "year": "2023",
+      "journal": "PLoS Computational Biology",
+      "doi": "",
+      "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1010457",
+      "tags": []
+    },
+    {
+      "title": "The increased hinge flexibility of an IgG1-IgG3 hybrid monoclonal enhances Fc-mediated protection against group A streptococci",
+      "authors": "Arman Izadi, Yasaman Karami, Eleni Bratanis, Sebastian Wrighton, Hamed Khakzad, ..., Lars Malmström, Pontus Nordenfelt",
+      "year": "2023",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2023.10.14.562368.abstract",
+      "tags": []
+    },
+    {
+      "title": "Exploring a structural data mining approach to design linkers for head-to-tail peptide cyclization",
+      "authors": "Yasaman Karami, Samuel Murail, Julien Giribaldi, Benjamin Lefranc, Florian Defontaine, ..., Jérôme Leprince, Pierre Tufféry",
+      "year": "2023",
+      "journal": "Journal of Chemical Information and Modeling",
+      "doi": "",
+      "link": "https://pubs.acs.org/doi/abs/10.1021/acs.jcim.3c00865",
+      "tags": []
+    },
+    {
+      "title": "Spike-dependent opsonization indicates both dose-dependent inhibition of phagocytosis and that non-neutralizing antibodies can confer protection to SARS-CoV-2",
+      "authors": "Wael Bahnan, Hamed Khakzad, Sebastian Wrighton, Martin Sundwall, Anna Bläckberg, ..., Magnus Rasmussen, Pontus Nordenfelt",
+      "year": "2022",
+      "journal": "Frontiers in immunology",
+      "doi": "",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2021.808932/full",
+      "tags": []
+    },
+    {
+      "title": "Invasive streptococcal infection can lead to the generation of cross-strain opsonic antibodies",
+      "authors": "Anna Bläckberg, Hamed Khakzad, Hanna Ivarsson, Sofia Thomasson, Vibha Kumra Ahnlide, ..., Magnus Rasmussen, Pontus Nordenfelt",
+      "year": "2022",
+      "journal": "Microbiology spectrum",
+      "doi": "",
+      "link": "https://journals.asm.org/doi/abs/10.1128/spectrum.02486-22",
+      "tags": []
+    },
+    {
+      "title": "Analysis of the polar residues located at the head domain of focal adhesion protein vinculin under the presence of the Shigella effector IpaA and its possible implications during in vivo mechanotransduction",
+      "authors": "Benjamin Cocom, Hamed Khakzad, Cesar Valencia, Guy Tran Van",
+      "year": "2022",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2022.11.23.517744.abstract",
+      "tags": []
+    },
+    {
+      "title": "Bat coronaviruses related to SARS-CoV-2 and infectious for human cells",
+      "authors": "Sarah Temmam, Yasaman Karami, Khamsing Vongphayloth, Eduard Baquero, Sandie Munier, ..., Der Werf, Marc Eloit",
+      "year": "2022",
+      "journal": "Nature",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41586-022-04532-4",
+      "tags": []
+    },
+    {
+      "title": "Structural determination of Streptococcus pyogenes M1 protein interactions with human immunoglobulin G using integrative structural biology",
+      "authors": "Hamed Khakzad, Lotta Happonen, Yasaman Karami, Sounak Chowdhury, Gizem Ertürk Bergdahl, ..., Johan Malmström, Lars Malmström",
+      "year": "2021",
+      "journal": "PLoS Computational Biology",
+      "doi": "",
+      "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008169",
+      "tags": []
+    },
+    {
+      "title": "Streptococcus pyogenes forms serotype-and local environment-dependent interspecies protein complexes",
+      "authors": "Sounak Chowdhury, Hamed Khakzad, Gizem Ertürk Bergdahl, Rolf Lood, Simon Ekstrom, ..., Lotta Happonen, Johan Malmström",
+      "year": "2021",
+      "journal": "Msystems",
+      "doi": "",
+      "link": "https://journals.asm.org/doi/abs/10.1128/msystems.00271-21",
+      "tags": []
+    },
+    {
+      "title": "In vivo Cross-Linking MS of the Complement System MAC Assembled on Live Gram-Positive Bacteria",
+      "authors": "Hamed Khakzad, Lotta Happonen, Guy Tran Van, Johan Malmström, Lars Malmström",
+      "year": "2021",
+      "journal": "Frontiers in genetics",
+      "doi": "",
+      "link": "https://www.frontiersin.org/articles/10.3389/fgene.2020.612475/full",
+      "tags": []
+    },
+    {
+      "title": "The structure of human dermatan sulfate epimerase 1 emphasizes the importance of C5-epimerization of glucuronic acid in higher organisms",
+      "authors": "Mahmudul Hasan, Hamed Khakzad, Lotta Happonen, Anders Sundin, Johan Unge, ..., Anders Malmström, Emil Tykesson",
+      "year": "2021",
+      "journal": "Chemical science",
+      "doi": "",
+      "link": "https://pubs.rsc.org/en/content/articlehtml/2021/sc/d0sc05971d",
+      "tags": []
+    },
+    {
+      "title": "Cheetah-MS: a web server to model protein complexes using tandem cross-linking mass spectrometry data",
+      "authors": "Hamed Khakzad, Lotta Happonen, Johan Malmström, Lars Malmström",
+      "year": "2021",
+      "journal": "Bioinformatics",
+      "doi": "",
+      "link": "https://academic.oup.com/bioinformatics/article-abstract/37/24/4871/6299385",
+      "tags": []
+    },
+    {
+      "title": "Quaternary structure modeling through chemical cross-linking mass spectrometry: Extending tx-ms jupyter reports",
+      "authors": "Hamed Khakzad, Swen Vermeul, Lars Malmström",
+      "year": "2021",
+      "journal": "Journal of visualized experiments: JoVE",
+      "doi": "",
+      "link": "https://hal.science/hal-04430492/",
+      "tags": []
+    },
+    {
+      "title": "Computational and biochemical analysis of type IV pilus dynamics and stability",
+      "authors": "Yasaman Karami, Aracelys López, Andrea Ori, Lee Thomassin, Benjamin Bardiaux, ..., Olivera Francetic, Michael Nilges",
+      "year": "2021",
+      "journal": "Structure",
+      "doi": "",
+      "link": "https://www.cell.com/structure/fulltext/S0969-2126(21)00258-6",
+      "tags": []
+    },
+    {
+      "title": "Structural determination of Streptococcus pyogenes M1 protein interactions with human immunoglobulin G using integrative structural biology",
+      "authors": "Hamed Khakzad, Lotta Happonen, Yasaman Karami, Sounak Chowdhury, Gizem Ertürk Bergdahl, ..., Johan Malmström, Lars Malmström",
+      "year": "2021",
+      "journal": "PLoS Computational Biology",
+      "doi": "",
+      "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008169",
+      "tags": []
+    },
+    {
+      "title": "Automatic Bayesian Weighting for SAXS data",
+      "authors": "Yasaman Karami, Pierre Maisonneuve, Nicolas Wolff, Michael Nilges",
+      "year": "2021",
+      "journal": "Frontiers in molecular biosciences",
+      "doi": "",
+      "link": "https://www.frontiersin.org/articles/10.3389/fmolb.2021.671011/full",
+      "tags": []
+    },
+    {
+      "title": "Deciphering the Conformational Dynamics of Escherichia coli Type IV Pilus",
+      "authors": "Yasaman Karami, Olivera Francetic, Nadia Izadi Pruneyre, Michael Nilges",
+      "year": "2021",
+      "journal": "Biophysical Journal",
+      "doi": "",
+      "link": "https://www.cell.com/biophysj/fulltext/S0006-3495(20)32792-2",
+      "tags": []
+    },
+    {
+      "title": "Predicting substitutions to modulate disorder and stability in coiled-coils",
+      "authors": "Yasaman Karami, Paul Saighi, Rémy Vanderhaegen, Denis Gerlier, Sonia Longhi, Elodie Laine, Alessandra Carbone",
+      "year": "2020",
+      "journal": "BMC bioinformatics",
+      "doi": "",
+      "link": "https://link.springer.com/article/10.1186/s12859-020-03867-x",
+      "tags": []
+    },
+    {
+      "title": "Rapid determination of quaternary protein structures in complex biological samples",
+      "authors": "Simon Hauri, Hamed Khakzad, Lotta Happonen, Johan Teleman, Johan Malmström, Lars Malmström",
+      "year": "2019",
+      "journal": "Nature communications",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41467-018-07986-1",
+      "tags": []
+    },
+    {
+      "title": "A quantitative Streptococcus pyogenes–human protein–protein interaction map reveals localization of opsonizing antibodies",
+      "authors": "Lotta Happonen, Simon Hauri, Gabriel Svensson Birkedal, Christofer Karlsson, Hamed Khakzad, ..., Lars Malmström, Johan Malmström",
+      "year": "2019",
+      "journal": "Nature Communications",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41467-019-10583-5",
+      "tags": []
+    },
+    {
+      "title": "Greedy de novo motif discovery to construct motif repositories for bacterial proteomes",
+      "authors": "Hamed Khakzad, Johan Malmström, Lars Malmström",
+      "year": "2019",
+      "journal": "BMC bioinformatics",
+      "doi": "",
+      "link": "https://link.springer.com/article/10.1186/s12859-019-2686-8",
+      "tags": []
+    },
+    {
+      "title": "GEMME: a simple and fast global epistatic model predicting mutational effects",
+      "authors": "Elodie Laine, Yasaman Karami, Alessandra Carbone",
+      "year": "2019",
+      "journal": "Molecular Biology and Evolution",
+      "doi": "",
+      "link": "https://academic.oup.com/mbe/article-abstract/36/11/2604/5548199",
+      "tags": []
+    },
+    {
+      "title": "DaReUS-Loop: a web server to model multiple loops in homology models",
+      "authors": "Yasaman Karami, Julien Rey, Guillaume Postic, Samuel Murail, Pierre Tufféry, De Vries",
+      "year": "2019",
+      "journal": "Nucleic Acids Research",
+      "doi": "",
+      "link": "https://academic.oup.com/nar/article-abstract/47/W1/W423/5494713",
+      "tags": []
+    },
+    {
+      "title": "DaReUS-Loop: accurate loop modeling using fragments from remote or unrelated proteins",
+      "authors": "Yasaman Karami, Frédéric Guyon, Sjoerd De Vries, Pierre Tufféry",
+      "year": "2018",
+      "journal": "Scientific Reports",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41598-018-32079-w",
+      "tags": []
+    },
+    {
+      "title": "“Infostery” analysis of short molecular dynamics simulations identifies highly sensitive residues and predicts deleterious mutations",
+      "authors": "Yasaman Karami, Tristan Bitard, Elodie Laine, Alessandra Carbone",
+      "year": "2018",
+      "journal": "Scientific Reports",
+      "doi": "",
+      "link": "https://www.nature.com/articles/s41598-018-34508-2",
+      "tags": []
+    }
+  ]
+}

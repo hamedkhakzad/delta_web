@@ -1,0 +1,43 @@
+{
+  "ai": {
+    "title": "Artificial Intelligence",
+    "description": "Our AI research dives into cutting-edge neural networks and machine learning techniques, aiming to replicate and surpass human cognitive abilities. This includes advanced research in deep learning and reinforcement learning.",
+    "image": "images/research/ai_detail.jpg",
+    "projects": [
+      {
+        "name": "Project Alpha",
+        "members": "Hamed Khakzad, Omid Mokhtari",
+        "details": "Developing innovative neural architectures for predictive analytics."
+      },
+      {
+        "name": "Project Beta",
+        "members": "Yasaman Karami",
+        "details": "Exploring ethical AI and its social impact."
+      }
+    ]
+  },
+  "cb": {
+    "title": "Computational Biology",
+    "description": "In Computational Biology, our team integrates computational methods with biological research to decode genetic information and understand complex biological systems at a deeper level.",
+    "image": "images/research/cb_detail.jpg",
+    "projects": [
+      {
+        "name": "Genome Analysis Project",
+        "members": "Luiz Felipe Piochi, Omid Mokhtari",
+        "details": "Utilizing algorithmic approaches to analyze genomic data."
+      }
+    ]
+  },
+  "re": {
+    "title": "Renewable Energy",
+    "description": "Our renewable energy research focuses on sustainable technology solutions that integrate solar, wind, and other green energy sources into modern infrastructures for a cleaner future.",
+    "image": "images/research/re_detail.jpg",
+    "projects": [
+      {
+        "name": "Solar Integration Initiative",
+        "members": "Margot Weber, Hamed Khakzad",
+        "details": "Designing efficient solar power systems for urban settings."
+      }
+    ]
+  }
+}

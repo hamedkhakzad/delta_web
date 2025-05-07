@@ -1,0 +1,674 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>DELTA @ Inria</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    
+    <style>
+        /* --- Wrapper for the sections --- */
+        #wrapper {
+            position: relative;
+            top: 70px;
+            height: calc(100vh - 70px);
+        }
+
+        /* --- Section Styling with internal scrolling --- */
+        .section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            background: inherit;
+        }
+
+        .section.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .section .inner {
+            text-align: center;
+        }
+
+        .section .inner h3 ,
+        .section .inner div {
+            text-align: left;
+        }
+
+
+		#nav {
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+			white-space: nowrap;
+			width: 100%;
+			scrollbar-width: none; /* Firefox */
+		}
+		#nav::-webkit-scrollbar {
+			display: none; /* Chrome, Safari, Edge */
+		}
+		#nav ul {
+			display: flex;
+			flex-wrap: nowrap;
+            justify-content: center;
+			gap: 1rem;
+			padding: 0;
+			margin: 0 auto;
+			min-width: max-content; /* Ensure it expands to fit all items */
+		}
+		#nav li {
+			display: inline-block;
+			flex-shrink: 0; /* Prevent items from shrinking */
+		}
+		
+		/* Fix for mobile devices */
+		@media screen and (max-width: 736px) {
+			#sidebar .inner {
+			padding-right: 0;
+			padding-left: 0;
+			overflow-x: auto;
+			}
+		}
+    </style>
+</head>
+
+<body class="is-preload">
+    <!-- Sidebar Navigation -->
+    <section id="sidebar">
+        <div class="inner">
+            <nav id="nav">
+                <ul>
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#team" class="nav-link">Team</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#software" class="nav-link">Software</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
+                    <li class="dropdown">
+                        <a href="news.html" class="nav-link dropdown">News</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#positions" class="dropdown-item">Open Positions</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#contacts" class="nav-link">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Wrapper for Full-Screen Sections -->
+    <div id="wrapper">
+        <!-- Home Section with Dynamic Animation -->
+        <section id="home" class="section home-section">
+        <!-- Animated Background -->
+        <div class="animated-bg"></div>
+        
+        <!-- Content Container -->
+        <div class="inner">
+            <!-- Small Square Logo Image -->
+            <div class="logo-container fade-in" style="animation-delay: 0s; margin-bottom: 1.5rem; text-align: center;">
+                <img src="images/logo.png" alt="DELTA Logo" class="square-logo" style="width: 100px; height: 100px; border-radius: 4px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            </div>
+            <h1 class="fade-in" style="animation-delay: 0s;">Welcome to DELTA</h1>
+            <p class="home-section-p">Advancing science through innovative research and collaboration.</p>
+            
+            <!-- Dynamic News Slider -->
+            <div class="dynamic-news-slider fade-in" style="animation-delay: 1s;">
+            <div class="news-slide active">Breaking News: Innovative AI Breakthrough!</div>
+            <div class="news-slide">Upcoming Webinar: The Future of Renewable Energy</div>
+            <div class="news-slide">New Research Publication Released</div>
+            </div>
+            
+            <!-- Call-to-Action Buttons -->
+            <ul class="actions fade-in" style="animation-delay: 1.5s;">
+            <li><a href="news.html" class="button" target="_blank">Recent News &amp; Events</a></li>
+            <li><a href="#positions" class="button nav-link">View Our Open Positions</a></li>
+            </ul>
+        </div>
+        </section>
+    
+        <!-- Team Section -->
+        <section id="team" class="section">
+            <div class="inner">
+                <h2>Our Team</h2>
+                <h3 style="margin-left: 20px;">Current Members</h3>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="images/hamed.jpg" alt="Hamed Khakzad" onclick="copyContact(event, 'hamed.khakzad@inria.fr', 'https://x.com/hamed_khakzad', 'https://www.linkedin.com/in/hamed-khakzad-91363466', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'hamed.khakzad@inria.fr', 'https://x.com/hamed_khakzad', 'https://www.linkedin.com/in/hamed-khakzad-91363466', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Hamed Khakzad</strong></span>
+                        <span>Tenure-Track Junior Professor</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/yasaman.jpg" alt="Yasaman Karami" onclick="copyContact(event, 'yasaman.karami@inria.fr', 'https://x.com/yasaman_karami', 'https://www.linkedin.com/in/yasaman-karami-70684231', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'yasaman.karami@inria.fr', 'https://x.com/yasaman_karami', 'https://www.linkedin.com/in/yasaman-karami-70684231', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Yasaman Karami</strong></span>
+                        <span>Chargée de recherche Inria</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/omid.png" alt="Omid Mokhtari" onclick="copyContact(event, 'alice@example.com', 'https://twitter.com/omid', 'https://www.linkedin.com/in/omidmokhtari', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'alice@example.com', 'https://twitter.com/omid', 'https://www.linkedin.com/in/omidmokhtari', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Omid Mokhtari</strong></span>
+                        <span>PhD Candidate</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/luiz.jpeg" alt="Luiz Felipe Piochi" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://twitter.com/luizfelipe', 'https://www.linkedin.com/in/luizfelipepiochi', 'https://lupiochi.me/'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://twitter.com/luizfelipe', 'https://www.linkedin.com/in/luizfelipepiochi', 'https://lupiochi.me/'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Luiz Felipe Piochi</strong></span>
+                        <span>PhD Student</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/margot.jpeg" alt="Margot Weber" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Margot Weber</strong></span>
+                        <span>Co-Supervision PhD</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/victor.jpg" alt="Victor Pryakhin" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Victor Pryakhin</strong></span>
+                        <span>Co-Supervision PhD</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/roy.jpeg" alt="Roy González-Alemán" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Roy González-Alemán</strong></span>
+                        <span>Postdoc</span>
+                    </div>
+                </div>
+                <h3 style="margin-left: 20px;">Past Members</h3>
+                <details style="margin-bottom: 120px;">
+                    <summary style="padding: 10px; background: rgba(255,255,255,0.05); border-radius: 4px; margin: 10px 0;">Show Past Members</summary>
+                    <ul class="past-members" style="list-style: none; padding-left: 15px; margin-top: 10px; margin-bottom: 20px;">
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Yu Tian - BSc Intern</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Sneha Bheemireddy - Postdoc</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">????? - Postdoc</li>
+                    </ul>
+                </details>
+            </div>
+        </section>
+            
+        <!-- Research Section -->
+        <section id="research" class="section">
+        <div class="inner">
+            <h2>Research</h2>
+            <p>Discover our groundbreaking work and innovative approaches in multiple fields.</p>
+
+            <!-- Dynamic Image Slider -->
+            <div class="research-slider">
+            <div class="slides">
+                <div class="slide active">
+                <img src="images/research/ai.jpeg" alt="Artificial Intelligence">
+                <div class="slide-caption">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Advancing human-like cognition through smart algorithms.</p>
+                </div>
+                </div>
+                <div class="slide">
+                <img src="images/research/ai2.jpeg" alt="Computational Biology">
+                <div class="slide-caption">
+                    <h3>Computational Biology</h3>
+                    <p>Merging biology with computation for deep insights.</p>
+                </div>
+                </div>
+                <div class="slide">
+                <img src="images/research/renewable.jpg" alt="Renewable Energy">
+                <div class="slide-caption">
+                    <h3>Renewable Energy</h3>
+                    <p>Innovating sustainable solutions for a greener future.</p>
+                </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <span class="prev">&#10094;</span>
+                <span class="next">&#10095;</span>
+            </div>
+            </div>
+
+            <!-- Research Topics List -->
+            <div class="research-topics" style="margin-bottom: 100px;">
+                <ul>
+                    <li data-topic="ai">
+                    <strong>Artificial Intelligence</strong>
+                    <p>Research on algorithms and systems that mimic human cognition.</p>
+                    </li>
+                    <li data-topic="cb">
+                    <strong>Computational Biology</strong>
+                    <p>Combining computer science with biology to analyze complex data.</p>
+                    </li>
+                    <li data-topic="re">
+                    <strong>Renewable Energy</strong>
+                    <p>Innovations focused on sustainable and clean energy solutions.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </section>
+
+        <!-- Research Modal (Overlay) -->
+        <div id="research-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+            <!-- Detailed content will be injected here dynamically -->
+            </div>
+        </div>
+        </div>
+
+        
+            
+        <!-- Software Section -->
+        <section id="software" class="section software-section">
+            <div class="inner">
+            <h2 class="fade-in" style="animation-delay: 0s;">Software</h2>
+            <p class="fade-in" style="animation-delay: 0.5s;">
+                Our software contributions include innovative tools and applications designed to advance scientific research and foster collaboration.
+            </p>
+            
+            <!-- Software Cards Grid -->
+            <div class="software-cards fade-in" style="animation-delay: 1s; margin-bottom: 100px;">
+                <div class="software-card">
+                <img src="images/software/tool1.png" alt="Tool 1">
+                <h3>DataViz Pro</h3>
+                <p>A powerful data visualization tool that turns complex datasets into interactive charts and graphs.</p>
+                <a href="software/tool1.html" class="button">Learn More</a>
+                </div>
+                
+                <div class="software-card">
+                <img src="images/software/tool2.png" alt="Tool 2">
+                <h3>SimuLab</h3>
+                <p>An intuitive simulation environment for testing computational models in real-time scenarios.</p>
+                <a href="software/tool2.html" class="button">Learn More</a>
+                </div>
+                
+                <div class="software-card">
+                <img src="images/software/tool3.png" alt="Tool 3">
+                <h3>ResearchHub</h3>
+                <p>A collaborative platform that streamlines research workflows and enhances team communication.</p>
+                <a href="software/tool3.html" class="button">Learn More</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <div class="inner">
+                <h2>Publications</h2>
+                <ul class="publication-list" style="list-style: none; padding-left: 20px;">
+                    <!-- The three most recent publications will be loaded here dynamically -->
+                </ul>
+                <div style="margin-top: 1rem; margin-bottom: 100px;">
+                    <a href="all_pubs.html" class="button" target="_blank">See All Publications</a>
+                </div>
+            </div>
+        </section>
+    
+        <!-- Open Positions Section -->
+        <section id="positions" class="section">
+            <div class="inner">
+                <h2>Open Positions</h2>
+                <p>We are looking for talented individuals to join our team. Check out our current opportunities below:</p>
+                <ul class="positions-list" style="list-style: none; padding-left: 0;">
+                    <li><strong>Postdoctoral Researcher</strong> - Expertise in computational methods (<a href="#">Apply here</a>).</li>
+                    <li><strong>Research Assistant</strong> - Experience in data analysis (<a href="#">Apply here</a>).</li>
+                </ul>
+            </div>
+        </section>
+    
+        <!-- Contacts Section -->
+        <section id="contacts" class="section">
+            <div class="inner" style="padding: 20px; padding-bottom: 40px;">
+                <h2>Contact Us</h2>
+                <div class="contact-text" style="padding: 10px; justify-content: center;">
+                    For general enquiries, you can write to Hamed (<a href="mailto:hamed.khakzad@inria.fr"><strong>hamed.khakzad@inria.fr</strong></a>)
+                    or Yasaman (<a href="mailto:yasaman.karami@inria.fr"><strong>yasaman.karami@inria.fr</strong></a>).<br><br>
+                    <h3>How to come to visit us?</h3><br>
+                    <p>The team is located at the Inria center in Nancy, France.</p>
+                    <div style="width: 100%; overflow: hidden; margin: 15px 0;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9999999999995!2d6.0752445!3d48.6656264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794a279f38e6957%3A0xc0f057fa1a5706d7!2sCentre%20Inria%20de%20l'Universit%C3%A9%20de%20Lorraine!5e0!3m2!1sen!2sfr!4v1634567890123!5m2!1sen!2sfr" style="border:0; width: 100%; max-width: 600px; height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <p><strong>By train:</strong> From Nancy Gare, take the trolleybus (T1, direction Vandoeuvre-CHU; you can buy tickets at the station or through the <a href="https://www.reseau-stan.com/titres-tarifs/points-de-vente/nemo-mticket" target="_blank">NéMO app</a>). Get off at Vélodrome, then walk about 5 minutes to the campus.</p>
+                    <p><strong>By air:</strong> The nearest major airports are in Paris (CDG) or Luxembourg (LUX). From CDG, take the TGV to Lorraine TGV and then the shuttle bus to Nancy Gare.</p>
+                    <br>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <ul class="menu">
+                <li>DELTA @ Inria</li>
+                <li>Built by <a href="https://lupiochi.me/">Luiz Felipe Piochi</a>.</li>
+            </ul>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/publications.js"></script>
+    <script>
+        // Navigation and section switching scripts
+        $(document).ready(function(){
+            $('#nav > ul').dropotron({
+                alignment: 'left',
+                hideDelay: 350,
+                baseZIndex: 100000,
+                mode: 'fade'
+            });
+            window.addEventListener('popstate', function(e) {
+                var currentHash = location.hash || '#home';
+                $('.section.active').fadeOut(300, function(){
+                    $(this).removeClass('active');
+                    $(currentHash).fadeIn(300, function(){
+                        $(this).addClass('active');
+                    });
+                });
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="'+currentHash+'"]').addClass('active');
+            });
+            
+            // Initialize default section display (#home or hash)
+            var initialSection = location.hash || '#home';
+            $('.section').hide().removeClass('active');
+            $(initialSection).fadeIn(300, function(){
+                $(this).addClass('active');
+            });
+            $('.nav-link').removeClass('active');
+            $('.nav-link[href="'+initialSection+'"]').addClass('active');
+            
+            // Navigation click handler for internal links
+            $('.nav-link').on('click', function(e){
+                var href = $(this).attr('href');
+                if(href === "#" || href === "") return;
+                // For external links or .html links, navigate normally
+                if(href.indexOf('http') === 0 || href.indexOf('.html') !== -1){
+                    if($(this).attr('target') === '_blank'){
+                        window.open(href, '_blank');
+                    } else {
+                        window.location.href = href;
+                    }
+                    return;
+                }
+                e.preventDefault();
+                history.pushState({}, '', href);
+                $('.section.active').fadeOut(300, function(){
+                    $(this).removeClass('active');
+                    $(href).fadeIn(300, function(){
+                        $(this).addClass('active');
+                    });
+                });
+                $('.nav-link').removeClass('active');
+                $('.nav-link[href="'+href+'"]').addClass('active');
+            });
+        });
+        
+        // Publications loader: Fetch and display the three most recent publications.
+        $(document).ready(function(){
+            $.getJSON('data/publications.json', function(data){
+                var publications = data.publications;
+                // Sort publications by year (assuming year is numeric)
+                publications.sort(function(a, b){
+                    return b.year - a.year;
+                });
+                // Take the three most recent publications
+                var recentPubs = publications.slice(0, 3);
+                recentPubs.forEach(function(pub){
+                    var li = $('<li></li>');
+                    var title = $('<h3></h3>');
+                    if(pub.link){
+                        title.append($('<a></a>').attr('href', pub.link).attr('target', '_blank').text(pub.title));
+                    } else {
+                        title.text(pub.title);
+                    }
+                    li.append(title);
+                    
+                    var meta = $('<div class="pub-meta"></div>');
+                    meta.html('<span><strong>Authors:</strong> ' + pub.authors.replace(/Hamed Khakzad|Yasaman Karami/g, '<b>$&</b>') + '</span><br>' +
+                              '<span><strong>Year:</strong> ' + pub.year + '</span><br>' +
+                              (pub.journal ? '<span><strong>Source:</strong> ' + pub.journal + '</span>' : ''));
+                    li.append(meta);
+                    
+                    $('.publication-list').append(li);
+                });
+            }).fail(function(jqxhr, textStatus, error){
+                console.error("Error loading publications:", textStatus, error);
+            });
+        });
+    </script>
+    <script>
+        // Contact Popup Script
+        function copyContact(event, email, twitterURL, linkedinURL, website) {
+            const existingPopup = document.querySelector('.contact-popup');
+            if (existingPopup) existingPopup.remove();
+            
+            let popupContent = '<div class="popup-content">';
+            popupContent += `<button onclick="handleContactAction('mail', '${email}')">
+                        <i class="fas fa-envelope"></i>
+                        </button>`;
+            if(twitterURL && twitterURL.trim() !== ""){
+                popupContent += `<button onclick="handleContactAction('twitter', '${twitterURL}')">
+                            <i class="fab fa-twitter"></i>
+                        </button>`;
+            }
+            if(linkedinURL && linkedinURL.trim() !== ""){
+                popupContent += `<button onclick="handleContactAction('linkedin', '${linkedinURL}')">
+                            <i class="fab fa-linkedin"></i>
+                        </button>`;
+            }
+            if(website && website.trim() !== ""){
+                popupContent += `<button onclick="handleContactAction('website', '${website}')">
+                            <i class="fas fa-globe"></i>
+                        </button>`;
+            }
+            popupContent += '</div>';
+            
+            const popup = document.createElement('div');
+            popup.className = 'contact-popup';
+            popup.innerHTML = popupContent;
+        
+            if (!document.getElementById('contact-popup-styles')) {
+                const style = document.createElement('style');
+                style.id = 'contact-popup-styles';
+                style.textContent = `
+                .contact-popup {
+                    position: fixed;
+                    z-index: 1000;
+                    background: rgba(32, 49, 61, 0.95);
+                    border-radius: 8px;
+                    backdrop-filter: blur(4px);
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                    transition: opacity 0.2s ease;
+                    padding: 8px;
+                }
+                .popup-content {
+                    display: flex;
+                    gap: 8px;
+                }
+                .contact-popup button {
+                    background: transparent;
+                    color: white;
+                    border: 1px solid rgba(255,255,255,0.2);
+                    padding: 8px 16px;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all 0.2s ease;
+                }
+                .contact-popup button:hover {
+                    background: rgba(255,255,255,0.1);
+                    border-color: rgba(255,255,255,0.3);
+                }
+                .notification {
+                    position: fixed;
+                    bottom: 20px;
+                    right: 20px;
+                    padding: 12px 24px;
+                    background: rgba(46, 150, 146, 0.95);
+                    color: white;
+                    border-radius: 4px;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: all 0.3s ease;
+                }
+                .notification.show {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                `;
+                document.head.appendChild(style);
+            }
+        
+            document.body.appendChild(popup);
+            const rect = event.target.getBoundingClientRect();
+            popup.style.top = `${rect.bottom + 8}px`;
+            popup.style.left = `${rect.left}px`;
+        
+            function closePopup(e) {
+                if (!popup.contains(e.target) && e.target !== event.target) {
+                    popup.style.opacity = '0';
+                    setTimeout(() => popup.remove(), 200);
+                    document.removeEventListener('click', closePopup);
+                }
+            }
+            setTimeout(() => document.addEventListener('click', closePopup), 0);
+            return false;
+        }
+    
+        function handleContactAction(action, data) {
+            if (action === 'mail') {
+                window.location.href = `mailto:${data}`;
+            } else if (action === 'twitter' || action === 'linkedin' || action === 'website') {
+                if (data && data.trim() !== "") window.open(data, '_blank');
+            }
+        }
+    
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => notification.classList.add('show'), 10);
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => notification.remove(), 300);
+            }, 2000);
+        }
+    </script>
+    <script>
+    $(document).ready(function(){
+      // --- Existing Slider Functionality ---
+      let currentSlide = 0;
+      const slides = $('.research-slider .slide');
+      const totalSlides = slides.length;
+      
+      function showSlide(index) {
+        slides.removeClass('active').fadeOut(600);
+        slides.eq(index).addClass('active').fadeIn(600);
+      }
+      
+      $('.next').click(function(){
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      });
+      
+      $('.prev').click(function(){
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        showSlide(currentSlide);
+      });
+      
+      // Auto-rotate slides every 5 seconds
+      setInterval(function(){
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+      }, 5000);
+
+      // Load research modal content from external JSON file.
+      let modalContent = {};
+      $.getJSON('research.json', function(data){
+          modalContent = data;
+      }).fail(function(jqxhr, textStatus, error) {
+          console.error("Error loading research.json:", textStatus, error);
+      });
+    
+      // Function to open the modal with content for a given topic.
+      function openModal(topic) {
+          const content = modalContent[topic];
+          if (!content) return;
+          let html = `<h2>${content.title}</h2>`;
+          html += `<p>${content.description}</p>`;
+          if (content.image) {
+              html += `<div style="text-align: center; margin: 1rem 0;">
+                         <img src="${content.image}" alt="${content.title}" style="max-width: 100%; border-radius: 8px;">
+                       </div>`;
+          }
+          if (content.projects && content.projects.length > 0) {
+              html += `<h3>Ongoing Projects</h3>`;
+              content.projects.forEach(proj => {
+                  html += `<div style="margin-bottom: 1rem; padding: 0.5rem; border-bottom: 1px solid #ffffff33;">
+                             <strong>${proj.name}</strong><br>
+                             <em>Members:</em> ${proj.members}<br>
+                             <span>${proj.details}</span>
+                           </div>`;
+              });
+          }
+          $('#research-modal .modal-body').html(html);
+          $('#research-modal').fadeIn(300);
+      }
+    
+      function closeModal() {
+          $('#research-modal').fadeOut(300);
+      }
+    
+      // Bind click event on research topics list items.
+      $('.research-topics li').on('click', function(){
+          const topic = $(this).data('topic');
+          openModal(topic);
+      });
+    
+      // Close modal when clicking on the close button.
+      $('#research-modal .close').on('click', function(){
+          closeModal();
+      });
+    
+      // Close modal when clicking outside the modal content.
+      $(window).on('click', function(event){
+          if ($(event.target).is('#research-modal')) {
+              closeModal();
+          }
+      });
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+          const slides = document.querySelectorAll('.dynamic-news-slider .news-slide');
+          let currentSlide = 0;
+          setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+          }, 4000);
+        });
+      </script>
+    
+        
+</body>
+</html>

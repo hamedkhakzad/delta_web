@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>DELTA @ Inria</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+		<section id="sidebar">
+			<div class="inner">
+				<nav>
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#team">Team</a></li>
+						<li><a href="#research">Research</a></li>
+						<li><a href="#publications">Publications</a></li>
+						<li><a href="#positions">Open Positions</a></li>
+						<li><a href="#contacts">Contacts</a></li>
+					</ul>
+				</nav>
+			</div>
+		</section>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Home Section (Full Page) -->
+			<section id="home" class="wrapper style1 fade-up full-page">
+				<div class="inner">
+					<h1>Welcome to DELTA</h1>
+					<p>Advancing science through innovative research and collaboration.</p>
+					<div class="home-news">
+						<div class="home-news-item">
+							<h3>News Title 1</h3>
+							<p>A brief description of the news item.</p>
+						</div>
+						<div class="home-news-item">
+							<h3>News Title 2</h3>
+							<p>A brief description of the news item.</p>
+						</div>
+					</div>
+					<ul class="actions">
+						<li><a href="news.html" class="button">View All News &amp; Events</a></li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Team Section (Full Page) -->
+			<section id="team" class="wrapper style2 fade-up full-page">
+				<div class="inner">
+					<h2>Our Team</h2>
+					<h3>Current Members</h3>
+					<div class="team-members">
+						<div class="team-member">
+							<img src="images/hamed.jpg" alt="Hamed Khakzad" />
+							<a href="#" onclick="copyContact(event, 'hamed.khakzad@inria.fr', 'https://twitter.com/hamed', 'https://www.linkedin.com/in/hamedkhakzad', ''); return false;">Contact</a>
+							<span>Principal Investigator</span>
+						</div>
+
+						<div class="team-member">
+							<img src="images/yasaman.jpg" alt="Yasaman Karami" />
+							<a href="#" onclick="copyContact(event, 'yasaman.karami@inria.fr', 'https://twitter.com/yasaman', 'https://www.linkedin.com/in/yasamankarami', ''); return false;">Contact</a>
+							<span>Principal Investigator</span>
+						</div>
+						
+						<div class="team-member">
+							<img src="images/omid.png" alt="Omid Mokhtari" />
+							<a href="#" onclick="copyContact(event, 'alice@example.com', 'https://twitter.com/omid', 'https://www.linkedin.com/in/omidmokhtari', ''); return false;">Contact</a>
+							<span>PhD Candidate</span>
+						</div>
+						
+						<div class="team-member">
+							<img src="images/luiz.jpeg" alt="Luiz Felipe Piochi" />
+							<a href="#" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://twitter.com/luizfelipe', 'https://www.linkedin.com/in/luizfelipepiochi', 'https://lupiochi.me/'); return false;">Contact</a>
+							<span>PhD Student</span>
+						</div>
+						
+						<div class="team-member">
+							<img src="images/margot.jpeg" alt="Margot Weber" />
+							<a href="#" onclick="copyContact(event, 'margot.weber@example.com', 'https://twitter.com/margot', 'https://www.linkedin.com/in/margotweber', ''); return false;">Contact</a>
+							<span>PhD Student</span>
+						</div>
+					</div>
+					<h3>Past Members</h3>
+					<details>
+						<summary>Show Past Members</summary>
+						<ul class="past-members">
+							<li>Yu Tian - BSc Intern</li>
+						</ul>
+					</details>
+				</div>
+			</section>
+
+			<!-- Research Section (Full Page) -->
+			<section id="research" class="wrapper style2 fade-up full-page">
+				<div class="inner">
+					<h2>Research</h2>
+					<p>Our research spans areas such as artificial intelligence, bioinformatics, and structural biology.</p>
+					<ul class="research-topics">
+						<li>
+							<strong>Artificial Intelligence</strong>
+							<p>Research on algorithms and systems that mimic human cognition.</p>
+						</li>
+						<li>
+							<strong>Computational Biology</strong>
+							<p>Combining computer science with biology to analyze complex biological data.</p>
+						</li>
+						<li>
+							<strong>Renewable Energy</strong>
+							<p>Innovations focused on sustainable and clean energy solutions.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Publications Section (Full Page) -->
+			<section id="publications" class="wrapper style2 fade-up full-page">
+				<div class="inner">
+					<h2>Publications</h2>
+					<!-- Container for 5 most recent publications -->
+					<ul class="publication-list">
+						<!-- Publications will be automatically loaded here -->
+					</ul>
+					<!-- Button to see all publications -->
+					<div style="margin-top: 1rem;">
+						<a href="all_pubs.html" class="button">See All Publications</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Open Positions Section (Full Page) -->
+			<section id="positions" class="wrapper style2 fade-up full-page">
+				<div class="inner">
+					<h2>Open Positions</h2>
+					<p>We are looking for talented individuals to join our team. Check out our current opportunities below:</p>
+					<ul class="positions-list">
+						<li><strong>Postdoctoral Researcher</strong> – Expertise in computational methods (<a href="#">Apply here</a>).</li>
+						<li><strong>Research Assistant</strong> – Experience in data analysis (<a href="#">Apply here</a>).</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- Contacts Section (Full Page) -->
+			<section id="contacts" class="wrapper style1 fade-up full-page">
+				<div class="inner">
+					<h2>Contact Us</h2>
+					<div class="contact-text">
+						For general enquiries, you can write to Hamed at <a href="mailto:hamed.khakzad@inria.fr"><strong>hamed.khakzad@inria.fr</strong></a>
+						or Yasaman at <a href="mailto:yasaman.karami@inria.fr"><strong>yasaman.karami@inria.fr</strong></a>.<br>
+						<br>
+						<h3>How to come to visit us?</h3>
+						<br>
+						<p>The team is located at the Inria center in Nancy, France.</p>
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9999999999995!2d6.0752445!3d48.6656264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794a279f38e6957%3A0xc0f057fa1a5706d7!2sCentre%20Inria%20de%20l'Universit%C3%A9%20de%20Lorraine!5e0!3m2!1sen!2sfr!4v1634567890123!5m2!1sen!2sfr" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+						
+						<p><strong>By train:</strong> From Nancy Gare, take the trolleybus (T1, direction Vandoeuvre-CHU; you can buy tickets at the station or through the MyBus app). Get off at Vélodrome, then walk about 5 minutes to the campus.</p>
+						<p><strong>By air:</strong> The nearest major airports are in Paris (CDG) or Luxembourg (LUX). From CDG, take the TGV to Lorraine TGV and then the shuttle bus to Nancy Gare.</p>
+					</div>
+				</div>
+			</section>
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer" class="wrapper style1-alt">
+			<div class="inner">
+				<ul class="menu">
+					<li style="color: white;">&copy; DELTA. Built by <a href="https://lupiochi.me/" style="color: white; text-decoration: none;">Luiz Felipe Piochi</a>.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Contact Popup Script -->
+		<script>
+			// Function to show a pop-up with multiple contact options
+			function copyContact(event, email, twitterURL, linkedinURL, website) {
+				// Remove any existing popup first
+				const existingPopup = document.querySelector('.contact-popup');
+				if (existingPopup) existingPopup.remove();
+				
+				// Build the popup content conditionally
+				let popupContent = '<div class="popup-content">';
+				popupContent += `<button onclick="handleContactAction('mail', '${email}')">
+									<i class="fas fa-envelope"></i>
+								 </button>`;
+				if(twitterURL && twitterURL.trim() !== ""){
+					popupContent += `<button onclick="handleContactAction('twitter', '${twitterURL}')">
+										<i class="fab fa-twitter"></i>
+									 </button>`;
+				}
+				if(linkedinURL && linkedinURL.trim() !== ""){
+					popupContent += `<button onclick="handleContactAction('linkedin', '${linkedinURL}')">
+										<i class="fab fa-linkedin"></i>
+									 </button>`;
+				}
+				if(website && website.trim() !== ""){
+					popupContent += `<button onclick="handleContactAction('website', '${website}')">
+										<i class="fas fa-globe"></i>
+									 </button>`;
+				}
+				popupContent += '</div>';
+				
+				// Create the popup container
+				const popup = document.createElement('div');
+				popup.className = 'contact-popup';
+				popup.innerHTML = popupContent;
+		
+				// Inject CSS if not already present
+				if (!document.getElementById('contact-popup-styles')) {
+					const style = document.createElement('style');
+					style.id = 'contact-popup-styles';
+					style.textContent = `
+						.contact-popup {
+							position: fixed;
+							z-index: 1000;
+							background: rgba(32, 49, 61, 0.95);
+							border-radius: 8px;
+							backdrop-filter: blur(4px);
+							box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+							transition: opacity 0.2s ease;
+							padding: 8px;
+						}
+						.popup-content {
+							display: flex;
+							gap: 8px;
+						}
+						.contact-popup button {
+							background: transparent;
+							color: white;
+							border: 1px solid rgba(255,255,255,0.2);
+							padding: 8px 16px;
+							border-radius: 4px;
+							cursor: pointer;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							transition: all 0.2s ease;
+						}
+						.contact-popup button:hover {
+							background: rgba(255,255,255,0.1);
+							border-color: rgba(255,255,255,0.3);
+						}
+						.notification {
+							position: fixed;
+							bottom: 20px;
+							right: 20px;
+							padding: 12px 24px;
+							background: rgba(46, 150, 146, 0.95);
+							color: white;
+							border-radius: 4px;
+							opacity: 0;
+							transform: translateY(20px);
+							transition: all 0.3s ease;
+						}
+						.notification.show {
+							opacity: 1;
+							transform: translateY(0);
+						}
+					`;
+					document.head.appendChild(style);
+				}
+		
+				// Append popup to document and position it relative to the clicked element
+				document.body.appendChild(popup);
+				const rect = event.target.getBoundingClientRect();
+				popup.style.top = `${rect.bottom + 8}px`;
+				popup.style.left = `${rect.left}px`;
+		
+				// Close the popup when clicking outside
+				function closePopup(e) {
+					if (!popup.contains(e.target) && e.target !== event.target) {
+						popup.style.opacity = '0';
+						setTimeout(() => popup.remove(), 200);
+						document.removeEventListener('click', closePopup);
+					}
+				}
+				setTimeout(() => document.addEventListener('click', closePopup), 0);
+				return false;
+			}
+		
+			// Handle actions based on the button pressed
+			function handleContactAction(action, data) {
+				if (action === 'mail') {
+					window.location.href = `mailto:${data}`;
+				} else if (action === 'twitter' || action === 'linkedin' || action === 'website') {
+					// Only open if a non-empty URL is provided
+					if (data && data.trim() !== "") window.open(data, '_blank');
+				}
+			}
+		
+			// Optional: A notification function if you want to show feedback
+			function showNotification(message) {
+				const notification = document.createElement('div');
+				notification.className = 'notification';
+				notification.textContent = message;
+				document.body.appendChild(notification);
+				
+				setTimeout(() => notification.classList.add('show'), 10);
+				setTimeout(() => {
+					notification.classList.remove('show');
+					setTimeout(() => notification.remove(), 300);
+				}, 2000);
+			}
+		</script>
+
+		<!-- Publications Auto-Load Script -->
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				// Adjust the path if your JSON file is located elsewhere
+				fetch('data/publications.json')
+					.then(response => {
+						if (!response.ok) {
+							throw new Error('Network response was not ok');
+						}
+						return response.json();
+					})
+					.then(data => {
+						if (!data.publications || data.publications.length === 0) {
+							console.error('No publications found in the JSON.');
+							return;
+						}
+						// Get the five most recent publications
+						const recentPublications = data.publications.slice(0, 5);
+						const publicationList = document.querySelector('.publication-list');
+						publicationList.innerHTML = ''; // Clear default content
+
+						recentPublications.forEach(pub => {
+							const li = document.createElement('li');
+							li.innerHTML = `
+								<a href="${pub.link}" target="_blank">${pub.title}</a> – ${pub.details}
+							`;
+							publicationList.appendChild(li);
+						});
+					})
+					.catch(err => console.error('Error loading publications:', err));
+			});
+		</script>
+	</body>
+</html>
