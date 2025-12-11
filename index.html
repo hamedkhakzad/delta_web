@@ -616,7 +616,7 @@
                               (pub.journal ? '<span><strong>Source:</strong> ' + pub.journal + '</span>' : ''));
                     li.append(meta);
                     
-                    $('.publication-list').append(li);
+                    $('#pub-list').append(li);
                 });
             }).fail(function(jqxhr, textStatus, error){
                 console.error("Error loading publications:", textStatus, error);
