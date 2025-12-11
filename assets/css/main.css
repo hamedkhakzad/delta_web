@@ -2629,7 +2629,7 @@ input, select, textarea {
 
 	ul {
 		list-style: disc;
-		margin: 0 0 2em 0;
+		margin: 0 80px 2em 80px;
 		padding-left: 1em;
 	}
 
