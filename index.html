@@ -590,38 +590,38 @@
             });
         });
         
-        // Publications loader: Fetch and display the three most recent publications.
-        $(document).ready(function(){
-            $.getJSON('data/publications.json', function(data){
-                var publications = data.publications;
-                // Sort publications by year (assuming year is numeric)
-                publications.sort(function(a, b){
-                    return b.year - a.year;
-                });
-                // Take the three most recent publications
-                var recentPubs = publications.slice(0, 20);
-                recentPubs.forEach(function(pub){
-                    var li = $('<li></li>');
-                    var title = $('<h3></h3>');
-                    if(pub.link){
-                        title.append($('<a></a>').attr('href', pub.link).attr('target', '_blank').text(pub.title));
-                    } else {
-                        title.text(pub.title);
-                    }
-                    li.append(title);
+        // // Publications loader: Fetch and display the three most recent publications.
+        // $(document).ready(function(){
+        //     $.getJSON('data/publications.json', function(data){
+        //         var publications = data.publications;
+        //         // Sort publications by year (assuming year is numeric)
+        //         publications.sort(function(a, b){
+        //             return b.year - a.year;
+        //         });
+        //         // Take the three most recent publications
+        //         var recentPubs = publications.slice(0, 20);
+        //         recentPubs.forEach(function(pub){
+        //             var li = $('<li></li>');
+        //             var title = $('<h3></h3>');
+        //             if(pub.link){
+        //                 title.append($('<a></a>').attr('href', pub.link).attr('target', '_blank').text(pub.title));
+        //             } else {
+        //                 title.text(pub.title);
+        //             }
+        //             li.append(title);
                     
-                    var meta = $('<div class="pub-meta"></div>');
-                    meta.html('<span><strong>Authors:</strong> ' + pub.authors.replace(/Hamed Khakzad|Yasaman Karami|Luiz Felipe Piochi|Omid Mokhtari|Roy González-Alemán|Victor Pryakhin/g, '<b>$&</b>') + '</span><br>' +
-                              '<span><strong>Year:</strong> ' + pub.year + '</span><br>' +
-                              (pub.journal ? '<span><strong>Source:</strong> ' + pub.journal + '</span>' : ''));
-                    li.append(meta);
+        //             var meta = $('<div class="pub-meta"></div>');
+        //             meta.html('<span><strong>Authors:</strong> ' + pub.authors.replace(/Hamed Khakzad|Yasaman Karami|Luiz Felipe Piochi|Omid Mokhtari|Roy González-Alemán|Victor Pryakhin/g, '<b>$&</b>') + '</span><br>' +
+        //                       '<span><strong>Year:</strong> ' + pub.year + '</span><br>' +
+        //                       (pub.journal ? '<span><strong>Source:</strong> ' + pub.journal + '</span>' : ''));
+        //             li.append(meta);
                     
-                    $('#pub-list').append(li);
-                });
-            }).fail(function(jqxhr, textStatus, error){
-                console.error("Error loading publications:", textStatus, error);
-            });
-        });
+        //             $('#pub-list').append(li);
+        //         });
+        //     }).fail(function(jqxhr, textStatus, error){
+        //         console.error("Error loading publications:", textStatus, error);
+        //     });
+        // });
     </script>
     <script>
         // Contact Popup Script
