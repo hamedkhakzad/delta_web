@@ -373,9 +373,10 @@
         <!-- Publications Section -->
         <section id="publications" class="section">
             <div class="inner">
-                <ul id="pub-list">
+                <!-- <ul id="pub-list"> -->
                 <!-- Publication list items will be injected here -->
-                </ul>
+                <!-- </ul> -->
+            <p><strong>L. F. Piochi</strong>, D. Tang, J. Malmström, <strong>Y. Karami</strong>, <strong>H. Khakzad</strong>, "ppIRIS: deep learning for proteome-wide prediction of bacterial protein-protein interactions." bioRxiv (2025)</p>
             </div>
         </section>
     
@@ -590,38 +591,6 @@
             });
         });
         
-        // // Publications loader: Fetch and display the three most recent publications.
-        // $(document).ready(function(){
-        //     $.getJSON('data/publications.json', function(data){
-        //         var publications = data.publications;
-        //         // Sort publications by year (assuming year is numeric)
-        //         publications.sort(function(a, b){
-        //             return b.year - a.year;
-        //         });
-        //         // Take the three most recent publications
-        //         var recentPubs = publications.slice(0, 20);
-        //         recentPubs.forEach(function(pub){
-        //             var li = $('<li></li>');
-        //             var title = $('<h3></h3>');
-        //             if(pub.link){
-        //                 title.append($('<a></a>').attr('href', pub.link).attr('target', '_blank').text(pub.title));
-        //             } else {
-        //                 title.text(pub.title);
-        //             }
-        //             li.append(title);
-                    
-        //             var meta = $('<div class="pub-meta"></div>');
-        //             meta.html('<span><strong>Authors:</strong> ' + pub.authors.replace(/Hamed Khakzad|Yasaman Karami|Luiz Felipe Piochi|Omid Mokhtari|Roy González-Alemán|Victor Pryakhin/g, '<b>$&</b>') + '</span><br>' +
-        //                       '<span><strong>Year:</strong> ' + pub.year + '</span><br>' +
-        //                       (pub.journal ? '<span><strong>Source:</strong> ' + pub.journal + '</span>' : ''));
-        //             li.append(meta);
-                    
-        //             $('#pub-list').append(li);
-        //         });
-        //     }).fail(function(jqxhr, textStatus, error){
-        //         console.error("Error loading publications:", textStatus, error);
-        //     });
-        // });
     </script>
     <script>
         // Contact Popup Script
@@ -868,31 +837,35 @@
             const listItem = document.createElement('li');
             listItem.className = 'pub-item';
             
-            // Title
-            const titleEl = document.createElement('h3');
-            if (pub.link) {
-                const titleLink = document.createElement('a');
-                titleLink.href = pub.link;
-                titleLink.target = '_blank';
-                titleLink.textContent = pub.title;
-                titleLink.style.color = '#000000';
-                titleLink.style.textDecoration = 'none';
-                titleLink.style.transition = 'color 0.2s ease';
-                titleLink.onmouseover = () => titleLink.style.color = '#2E9692';
-                titleLink.onmouseout = () => titleLink.style.color = '#000000';
-                titleEl.appendChild(titleLink);
-            } else {
-                titleEl.textContent = pub.title;
-            }
-            listItem.appendChild(titleEl);
+            // Create publication entry in the format: (1) Authors, "Title." Journal (Year), Link.
+            const pubEl = document.createElement('p');
+            let pubHTML = `(${data.publications.indexOf(pub) + 1}) `;
             
-            // Meta information: Authors, Year, Journal
-            const metaEl = document.createElement('div');
-            metaEl.className = 'pub-meta';
-            metaEl.innerHTML = `<span><strong>Authors:</strong> ${pub.authors.replace(/Hamed Khakzad|Yasaman Karami/g, '<b>$&</b>')}</span><br>
-                                <span><strong>Year:</strong> ${pub.year}</span><br>
-                                ${ pub.journal ? `<span><strong>Source:</strong> ${pub.journal}</span><br>` : '' }`;
-            listItem.appendChild(metaEl);
+            // Authors with bold formatting for team members
+            pubHTML += `${pub.authors.replace(/Hamed Khakzad|Yasaman Karami/g, '<strong>$&</strong>')}, `;
+            
+            // Title with link if available
+            if (pub.link) {
+              pubHTML += `"<a href="${pub.link}" target="_blank" style="text-decoration: none; color: inherit;">${pub.title}</a>." `;
+            } else {
+              pubHTML += `"${pub.title}." `;
+            }
+            
+            // Journal and Year
+            if (pub.journal) {
+              pubHTML += `<strong>${pub.journal}</strong> (${pub.year})`;
+            } else {
+              pubHTML += `(${pub.year})`;
+            }
+            
+            // DOI link if available
+            if (pub.doi) {
+              pubHTML += `, <a href="https://doi.org/${pub.doi}" target="_blank" style="text-decoration: none; color: inherit;">Link</a>`;
+            }
+            
+            pubHTML += `.`;
+            pubEl.innerHTML = pubHTML;
+            listItem.appendChild(pubEl);
             
             // DOI icon if available
             if (pub.doi) {
