@@ -125,10 +125,16 @@ def main():
     ]
     
     all_publications = []
+    seen_titles = set()
+    
     for author_id in author_ids:
         try:
             pubs = fetch_author_publications(author_id)
-            all_publications.extend(pubs)
+            for pub in pubs:
+                # Use title as unique identifier to avoid duplicates
+                if pub["title"] not in seen_titles:
+                    all_publications.append(pub)
+                    seen_titles.add(pub["title"])
         except Exception as e:
             print(f"Error fetching publications for author {author_id}: {e}")
     
