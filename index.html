@@ -819,14 +819,19 @@
         .then(response => response.json())
         .then(data => {
           const pubList = document.getElementById('pub-list');
-          data.publications.forEach(pub => {
+          const totalPubs = data.publications.length;
+          
+          data.publications.forEach((pub, index) => {
             // Create a publication list item.
             const listItem = document.createElement('li');
             listItem.className = 'pub-item';
+            listItem.style.textAlign = 'left';
             
-            // Create publication entry in the format: (1) Authors, "Title." Journal (Year), Link.
+            // Create publication entry with reversed numbering
             const pubEl = document.createElement('p');
-            let pubHTML = `(${data.publications.indexOf(pub) + 1}) `;
+            pubEl.style.textAlign = 'left';
+            const pubNumber = totalPubs - index;
+            let pubHTML = `(${pubNumber}) `;
             
             // Authors with bold formatting for team members
             pubHTML += `${pub.authors.replace(/Hamed Khakzad|Yasaman Karami/g, '<strong>$&</strong>')}, `;
@@ -858,18 +863,9 @@
             if (pub.doi) {
               const doiEl = document.createElement('div');
               doiEl.innerHTML = pub.doi;
+              doiEl.style.textAlign = 'left';
               listItem.appendChild(doiEl);
             }
-            
-            // // Button to view publication (if link exists)
-            // if (pub.link) {
-            //   const btn = document.createElement('a');
-            //   btn.href = pub.link;
-            //   btn.target = '_blank';
-            //   btn.className = 'button small';
-            //   btn.textContent = 'View Publication';
-            //   listItem.appendChild(btn);
-            // }
             
             pubList.appendChild(listItem);
           });
