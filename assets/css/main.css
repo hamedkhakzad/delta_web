@@ -4089,7 +4089,7 @@ input, select, textarea {
 
   .research-topics ul {
 	list-style: none;
-	padding: 0;
+	padding: 20px;
 	margin-top: 2rem;
 	display: flex;
 	justify-content: center;
@@ -4627,7 +4627,7 @@ section.wrapper.full-page .inner {
 .dropdown-menu {
     list-style: none;
     padding-left: 0;
-    background: rgba(70, 70, 70, 0.426);
+    background: rgba(70, 70, 70, 0);
 }
 
 .dropdown-menu li a {
@@ -4645,6 +4645,6 @@ section.wrapper.full-page .inner {
 }
 
 .dropdown-item:hover {
-    color: #ffffff;
+    color: #000000;
     background: rgba(255, 255, 255, 0.05);
 }
