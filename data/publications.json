@@ -1,6 +1,42 @@
 {
   "publications": [
     {
+      "title": "DynaRepo: the repository of macromolecular conformational dynamics",
+      "authors": "Omid Mokhtari, Emmanuelle Bignon, Hamed Khakzad, Yasaman Karami",
+      "year": "2025",
+      "journal": "Nucleic Acids Research",
+      "doi": "",
+      "link": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaf1130/8322558",
+      "tags": []
+    },
+    {
+      "title": "ppIRIS: deep learning for proteome-wide prediction of bacterial protein-protein interactions",
+      "authors": "Luiz Felipe Piochi, Di Tang, Johan Malmström, Yasaman Karami, Hamed Khakzad",
+      "year": "2025",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.1101/2025.09.22.677885.full.pdf",
+      "tags": []
+    },
+    {
+      "title": "B3GALT6 mutations lead to compromised connective tissue biomechanics in Ehlers-Danlos syndrome",
+      "authors": "Roméo Milan Diana, Benjamin Jolivet, Jean-Baptiste Vincourt, Sébastien Hergalant, Grégory Francius, Yasaman Karami, Hamed Khakzad, Rebekka Wild, Marie Bourgeais, Anne Robert, Alison Wurtz, Guillermo Barreto, Nick Ramalanjaona, Déborah Helle, Rachel Onifarasoaniaina, Sophie Front, Chrystel Lopin-Bon, Delfien Syx, Fransiska Malfait, Sylvie Fournel-Gigleux, Sandrine Gulberti, Catherine Bui",
+      "year": "2025",
+      "journal": "JCI insight",
+      "doi": "",
+      "link": "https://search.proquest.com/openview/ee84092073c345b7785142fbeea7e22a/1?pq-origsite=gscholar&cbl=7421157",
+      "tags": []
+    },
+    {
+      "title": "Shaping the uncharted: Revealing the protein structure space from the perspective of generative models",
+      "authors": "Luiz Felipe Piochi, Hamed Khakzad",
+      "year": "2025",
+      "journal": "Cell Systems",
+      "doi": "",
+      "link": "https://www.cell.com/cell-systems/abstract/S2405-4712(25)00202-9",
+      "tags": []
+    },
+    {
       "title": "DynamicGT: a dynamic-aware geometric transformer model to predict protein binding interfaces in flexible and disordered regions",
       "authors": "Omid Mokhtari, Sergei Grudinin, Yasaman Karami, Hamed Khakzad",
       "year": "2025",
