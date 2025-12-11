@@ -73,11 +73,11 @@
 		/* Fix for mobile devices */
 		@media screen and (max-width: 736px) {
 			#sidebar .inner {
-			padding-right: 0;
-			padding-left: 0;
-			overflow-x: auto;
-			}
-		}
+            padding-right: 0;
+            padding-left: 0;
+            overflow-x: auto;
+            }
+        }
     </style>
 </head>
 
@@ -87,18 +87,20 @@
         <div class="inner">
             <nav id="nav">
                 <ul>
+                    <li><img src="images/logo_bar.png" alt="DELTA Logo" class="nav-logo" style="height: 60px; width: auto; margin-right: 400px; vertical-align: left;"></li>
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#team" class="nav-link">Team</a></li>
                     <li><a href="#research" class="nav-link">Research</a></li>
                     <li><a href="#software" class="nav-link">Software</a></li>
                     <li><a href="#publications" class="nav-link">Publications</a></li>
                     <li class="dropdown">
-                        <a href="news.html" class="nav-link dropdown">News</a>
+                        <a href="#news" class="nav-link dropdown">News</a>
                         <ul class="dropdown-menu">
                             <li><a href="#positions" class="dropdown-item">Open Positions</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contacts" class="nav-link">Contacts</a></li>
+                    <li><a href="#contacts" class="nav-link">Contacts</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -109,28 +111,33 @@
         <!-- Home Section with Dynamic Animation -->
         <section id="home" class="section home-section">
         <!-- Animated Background -->
-        <div class="animated-bg"></div>
+        <!-- <div class="animated-bg"></div> -->
         
         <!-- Content Container -->
         <div class="inner">
+            <!-- <figure class="banner-figure fade-in" style="animation-delay: 0s; margin: 0 auto 1.5rem; max-width: 1100px; width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.15);">
+                <img src="images/banner.jpg" alt="DELTA research banner" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                <figcaption style="padding: 12px 16px; background: rgba(0,0,0,0.55); color: #fff; font-size: 0.95rem; text-align: left;">
+                    DELTA — Dynamics-aware data-driven approaches for macromolecular complexes and design.
+                </figcaption>
+            </figure> -->
             <!-- Small Square Logo Image -->
             <div class="logo-container fade-in" style="animation-delay: 0s; margin-bottom: 1.5rem; text-align: center;">
-                <img src="images/logo.png" alt="DELTA Logo" class="square-logo" style="width: 100px; height: 100px; border-radius: 4px; object-fit: cover; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                <img src="images/logo.png" alt="DELTA Logo" class="square-logo" style="width: 300px; height: 300px; border-radius: 1px; object-fit: cover;">
             </div>
-            <h1 class="fade-in" style="animation-delay: 0s;">Welcome to DELTA</h1>
-            <p class="home-section-p">Advancing science through innovative research and collaboration.</p>
+            <h1 class="fade-in" style="animation-delay: 0s;">Delta Research Team at Inria</h1>
+            <h4 class="home-section-p">Dynamics-aware data-driven approaches for macromolecular complexes and design</h4>
             
-            <!-- Dynamic News Slider -->
+            <!-- Dynamic News Slider
             <div class="dynamic-news-slider fade-in" style="animation-delay: 1s;">
-            <div class="news-slide active">Breaking News: Innovative AI Breakthrough!</div>
-            <div class="news-slide">Upcoming Webinar: The Future of Renewable Energy</div>
-            <div class="news-slide">New Research Publication Released</div>
-            </div>
+            <div class="news-slide active">Dynamics-aware data-driven approaches for macromolecular complexes and design</div>
+            </div> -->
             
             <!-- Call-to-Action Buttons -->
-            <ul class="actions fade-in" style="animation-delay: 1.5s;">
-            <li><a href="news.html" class="button" target="_blank">Recent News &amp; Events</a></li>
-            <li><a href="#positions" class="button nav-link">View Our Open Positions</a></li>
+            <!-- <ul class="actions fade-in" style="animation-delay: 1s;">
+            <li><a href="#research" class="button" target="_blank">Our Research</a></li>
+            <li><a href="#team" class="button nav-link">Our Team</a></li>
+            <li><a href="#positions" class="button nav-link">Open Positions</a></li> -->
             </ul>
         </div>
         </section>
@@ -138,20 +145,39 @@
         <!-- Team Section -->
         <section id="team" class="section">
             <div class="inner">
-                <h2>Our Team</h2>
-                <h3 style="margin-left: 20px;">Current Members</h3>
+                <!-- <h2>Our Team</h2> -->
                 <div class="team-members">
                     <div class="team-member">
                         <img src="images/hamed.jpg" alt="Hamed Khakzad" onclick="copyContact(event, 'hamed.khakzad@inria.fr', 'https://x.com/hamed_khakzad', 'https://www.linkedin.com/in/hamed-khakzad-91363466', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
                         <a href="#" onclick="copyContact(event, 'hamed.khakzad@inria.fr', 'https://x.com/hamed_khakzad', 'https://www.linkedin.com/in/hamed-khakzad-91363466', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
                         <span><strong>Hamed Khakzad</strong></span>
-                        <span>Tenure-Track Junior Professor</span>
+                        <span>Junior Professor</span>
                     </div>
                     <div class="team-member">
                         <img src="images/yasaman.jpg" alt="Yasaman Karami" onclick="copyContact(event, 'yasaman.karami@inria.fr', 'https://x.com/yasaman_karami', 'https://www.linkedin.com/in/yasaman-karami-70684231', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
                         <a href="#" onclick="copyContact(event, 'yasaman.karami@inria.fr', 'https://x.com/yasaman_karami', 'https://www.linkedin.com/in/yasaman-karami-70684231', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
                         <span><strong>Yasaman Karami</strong></span>
                         <span>Chargée de recherche Inria</span>
+                    </div>
+                </div>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="images/roy.jpeg" alt="Roy González-Alemán" onclick="copyContact(event, 'roy.gonzalez-aleman@inria.fr', 'https://x.com/rga____', 'https://www.linkedin.com/in/roy-gonz%C3%A1lez-alem%C3%A1n-aba3aba3/', 'https://orcid.org/0000-0003-3852-4902'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'roy.gonzalez-aleman@inria.fr', 'https://x.com/rga____', 'https://www.linkedin.com/in/roy-gonzález-alemán-aba3aba3/', 'https://orcid.org/0000-0003-3852-4902'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Roy González-Alemán</strong></span>
+                        <span>Postdoc</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/nb.jpeg" alt="Nicolas Buton" onclick="copyContact(event, 'nicolas.buton@inria.fr', 'https://x.com/'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'nicolas.buton@inria.fr', 'https://x.com/rga____', 'https://www.linkedin.com'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Nicolas Buton</strong></span>
+                        <span>Postdoc</span>
+                    </div>
+                    <div class="team-member">
+                        <img src="images/jalim.jpeg" alt="Jalim Singh" onclick="copyContact(event, 'jalim.singh@inria.fr', 'https://x.com/'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'jalim.singh@inria.fr', 'https://x.com/rga____', 'https://www.linkedin.com'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Nicolas Buton</strong></span>
+                        <span>Postdoc</span>
                     </div>
                     <div class="team-member">
                         <img src="images/omid.png" alt="Omid Mokhtari" onclick="copyContact(event, 'omid.mokhtari@inria.fr', '', 'https://www.linkedin.com/in/omid-mokhtari-81a982131/', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
@@ -163,34 +189,27 @@
                         <img src="images/luiz.jpeg" alt="Luiz Felipe Piochi" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://x.com/piochimico', 'https://www.linkedin.com/in/luiz-piochi/', 'https://lupiochi.me/'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
                         <a href="#" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://twitter.com/luizfelipe', 'https://www.linkedin.com/in/luiz-piochi/', 'https://lupiochi.me/'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
                         <span><strong>Luiz Felipe Piochi</strong></span>
-                        <span>PhD Student</span>
-                    </div>
-                    <div class="team-member">
-                        <img src="images/margot.jpeg" alt="Margot Weber" onclick="copyContact(event, 'margot.weber@ibs.fr', '', 'https://www.linkedin.com/in/margot-weber-5a4417263', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
-                        <a href="#" onclick="copyContact(event, 'margot.weber@ibs.fr', '', 'https://www.linkedin.com/in/margot-weber-5a4417263', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
-                        <span><strong>Margot Weber</strong></span>
-                        <span>Co-supervision PhD</span>
+                        <span>PhD Candidate</span>
                     </div>
                     <div class="team-member">
                         <img src="images/victor.jpg" alt="Victor Pryakhin" onclick="copyContact(event, 'victor.pryakhin@inria.fr', '', 'https://www.linkedin.com/in/victor-pryakhin-7a2695211', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
                         <a href="#" onclick="copyContact(event, 'victor.pryakhin@inria.fr', '', 'https://www.linkedin.com/in/victor-pryakhin-7a2695211', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
                         <span><strong>Victor Pryakhin</strong></span>
-                        <span>Co-supervision PhD</span>
+                        <span>Shared PhD Candidate</span>
                     </div>
                     <div class="team-member">
-                        <img src="images/roy.jpeg" alt="Roy González-Alemán" onclick="copyContact(event, 'roy.gonzalez-aleman@univ-lorraine.fr', 'https://x.com/rga____', 'https://www.linkedin.com/in/roy-gonz%C3%A1lez-alem%C3%A1n-aba3aba3/', 'https://orcid.org/0000-0003-3852-4902'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
-                        <a href="#" onclick="copyContact(event, 'roy.gonzalez-aleman@univ-lorraine.fr', 'https://x.com/rga____', 'https://www.linkedin.com/in/roy-gonzález-alemán-aba3aba3/', 'https://orcid.org/0000-0003-3852-4902'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
-                        <span><strong>Roy González-Alemán</strong></span>
-                        <span>Postdoc</span>
+                        <img src="images/margot.jpeg" alt="Margot Weber" onclick="copyContact(event, 'margot.weber@ibs.fr', '', 'https://www.linkedin.com/in/margot-weber-5a4417263', ''); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'margot.weber@ibs.fr', '', 'https://www.linkedin.com/in/margot-weber-5a4417263', ''); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <span><strong>Margot Weber</strong></span>
+                        <span>Shared PhD Candidate</span>
                     </div>
                 </div>
-                <h3 style="margin-left: 20px;">Past Members</h3>
                 <details style="margin-bottom: 120px;">
                     <summary style="padding: 10px; background: rgba(255,255,255,0.05); border-radius: 4px; margin: 10px 0;">Show Past Members</summary>
                     <ul class="past-members" style="list-style: none; padding-left: 15px; margin-top: 10px; margin-bottom: 20px;">
                         <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Yu Tian - BSc Intern</li>
                         <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Sneha Bheemireddy - Postdoc</li>
-                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">????? - Postdoc</li>
+                        <li style="padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">Ishola Abeeb Akinwumi - MSc Internship</li>
                     </ul>
                 </details>
             </div>
@@ -199,58 +218,99 @@
         <!-- Research Section -->
         <section id="research" class="section">
         <div class="inner">
-            <h2>Research</h2>
-            <p>Discover our groundbreaking work and innovative approaches in multiple fields.</p>
+            <div class="news-cards-research">
 
-            <!-- Dynamic Image Slider -->
-            <div class="research-slider">
-            <div class="slides">
-                <div class="slide active">
-                <img src="images/research/ai.jpeg" alt="Artificial Intelligence">
-                <div class="slide-caption">
-                    <h3>Artificial Intelligence</h3>
-                    <p>Advancing human-like cognition through smart algorithms.</p>
-                </div>
-                </div>
-                <div class="slide">
-                <img src="images/research/ai2.jpeg" alt="Computational Biology">
-                <div class="slide-caption">
-                    <h3>Computational Biology</h3>
-                    <p>Merging biology with computation for deep insights.</p>
-                </div>
-                </div>
-                <div class="slide">
-                <img src="images/research/renewable.jpg" alt="Renewable Energy">
-                <div class="slide-caption">
-                    <h3>Renewable Energy</h3>
-                    <p>Innovating sustainable solutions for a greener future.</p>
-                </div>
-                </div>
+            <div class="news-card-research horizontal">
+            <div class="image-container-research">
+                <img src="images/research/dyna.png" alt="ANR-PIQ Award">
             </div>
-            <div class="slider-controls">
-                <span class="prev">&#10094;</span>
-                <span class="next">&#10095;</span>
+            <div class="news-content-research">
+                <h3>Dynamic-aware deep learning models</h3>
+                <p>Our team aims to develop data-driven approaches capable of systematically learning the conformational heterogeneity of biological systems to solve fundamental challenges stem from static-based. Such frameworks typically consists of multiple (task-specific) steps, including data generation, feature extraction, representation and encoding, and the architecture design. The task-in-hand has a direct impact on the method of choice for each step. Our recent efforts in this direction led to introducing DynaRepo and DynamicGT.</p>
+                <p>We established <strong>DynaRepo</strong>, the first official MDDB node in France (second largest in Europe), hosting >5.5 billion frames for >700 macromolecular complexes (>1 ms of simulation time), including protein-protein and protein-nucleic acid assemblies. Each complex was simulated in triplicate for 500 ns, with pre-computed analyses (e.g., RMSD, SASA, correlations) to facilitate AI training.</p>
+                <p>Leveraging DynaRepo, we developed <strong>DynamicGT</strong>, the first dynamic-aware architecture for the prediction of protein binding sites. It is a novel GT architecture that captures the conformational heterogeneity of proteins for residue classification of binding sites. Inspired from the principles of cooperative graph neural networks, DynamicGT enables dynamic message passing between surface and core atoms, where a geometric transformer imposes strict message-passing constraints to predict binding site probabilities.</p>
             </div>
             </div>
 
-            <!-- Research Topics List -->
-            <div class="research-topics" style="margin-bottom: 100px;">
-                <ul>
-                    <li data-topic="ai">
-                    <strong>Artificial Intelligence</strong>
-                    <p>Research on algorithms and systems that mimic human cognition.</p>
-                    </li>
-                    <li data-topic="cb">
-                    <strong>Computational Biology</strong>
-                    <p>Combining computer science with biology to analyze complex data.</p>
-                    </li>
-                    <li data-topic="re">
-                    <strong>Renewable Energy</strong>
-                    <p>Innovations focused on sustainable and clean energy solutions.</p>
-                    </li>
-                </ul>
+            <div class="news-card-research horizontal">
+                <div class="image-container-research">
+                    <img src="images/research/design.png" alt="ANR-JCJC (IDPFold) Award">
+                </div>
+            <div class="news-content-research">
+                <h3>Enhanced data-driven protein design</h3>
+                <p>We are actively contributing to developing innovative frameworks for synthetic biology and protein design. One of the aims of our team is to develop a framework for large-scale protein binder design with high specificity and affinity toward the target. Our effort in this direction so far led to the introduction of <strong>SURFACE-Bind</strong> database, an interactive web server that provides researchers with access to detailed data of the human surfaceome, facilitating the design of next-generation therapeutics. We introduced a large-scale computational resource coupled with an enhanced experimental framework for de novo protein binder design. Our approach targeted the entire human surfaceome (2,886 protein targets), a critical class of therapeutic targets, paving the way for new protein-based therapeutics. Leveraging a surface-based geometric convolutional neural network, we systematically evaluated the entire human surfaceome, identifying ~4,500 binding sites and targeted them by a library of 640,000 small fragments (seeds), equivalent to performing 3 billion protein-protein docking calculations. We provided detailed insights into the targetability of each predicted binding interface and suggested a high-quality set of binder seeds to support future target-specific protein design approaches.</p>
             </div>
-        </div>
+            </div>
+
+            <div class="news-card-research horizontal">
+                <div class="image-container-research">
+                    <img src="images/research/gas.png" alt="ANR-JCJC (IDPFold) Award">
+                </div>
+            <div class="news-content-research">
+                <h3>Machine learning-guided integrative structural biology & Host-pathogene interactions</h3>
+                <p>The aim of the Delta team in this part is to perform research that can be applied to real, ongoing biological problems. Accordingly, we actively collaborate with national and international groups (mostly experimental biologists) to further evaluate our scientific developments in practice. The application part of our research follows three main strategies: First, antimicrobial resistance (AMR), toward elucidating the molecular complexes that are necessary for viral or bacterial survival and infection. Second, designing novel protein binders (peptides or proteins) with therapeutic potentials, and third, elucidating the dynamic behavior of large macromolecular complexes.</p>
+            </div>
+            </div>
+
+            <style>
+            .news-cards-research {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                margin-top: 40px;
+                margin-bottom: 50px;
+                margin-left: 100px;
+                margin-right: 100px;
+            }
+            
+            .news-card-research.horizontal {
+                display: flex;
+                align-items: center;
+                border-radius: 40px;
+                overflow: hidden;
+                padding: 10px;
+            }
+            
+            .image-container-research {
+                width: 400px;
+                height: 400px;
+                margin-right: 40px;
+                margin-left: 40px;
+                flex-shrink: 0;
+            }
+            
+            .news-card-research img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 4px;
+            }
+            
+            .news-content-research {
+                flex: 1;
+            }
+            
+            .news-content-research h3 {
+                margin: 0 0 5px 0;
+            }
+            
+            .news-content-research p {
+                margin: 0 0 5px 0;
+            }
+            
+            @media (max-width: 768px) {
+                .news-card-research.horizontal {
+                flex-direction: column;
+                text-align: center;
+                }
+                
+                .image-container-research {
+                margin: 0 0 15px 0;
+                }
+            }
+            </style>
+            </div>
+            </div>
         </section>
 
         <!-- Research Modal (Overlay) -->
@@ -262,47 +322,56 @@
             </div>
         </div>
         </div>
-
-        
             
         <!-- Software Section -->
         <section id="software" class="section software-section">
-            <div class="inner">
-            <h2 class="fade-in" style="animation-delay: 0s;">Software</h2>
-            <p class="fade-in" style="animation-delay: 0.5s;">
-                Our software contributions include innovative tools and applications designed to advance scientific research and foster collaboration.
-            </p>
-            
-            <!-- Software Cards Grid -->
-            <div class="software-cards fade-in" style="animation-delay: 1s; margin-bottom: 100px;">
-                <div class="software-card">
-                <img src="images/software/tool1.png" alt="Tool 1">
-                <h3>DataViz Pro</h3>
-                <p>A powerful data visualization tool that turns complex datasets into interactive charts and graphs.</p>
-                <a href="software/tool1.html" class="button">Learn More</a>
-                </div>
-                
-                <div class="software-card">
-                <img src="images/software/tool2.png" alt="Tool 2">
-                <h3>SimuLab</h3>
-                <p>An intuitive simulation environment for testing computational models in real-time scenarios.</p>
-                <a href="software/tool2.html" class="button">Learn More</a>
-                </div>
-                
-                <div class="software-card">
-                <img src="images/software/tool3.png" alt="Tool 3">
-                <h3>ResearchHub</h3>
-                <p>A collaborative platform that streamlines research workflows and enhances team communication.</p>
-                <a href="software/tool3.html" class="button">Learn More</a>
-                </div>
+        <div class="inner">
+            <!-- Research Topics List -->
+            <div class="research-topics" style="margin-bottom: 50px;">
+                <ul>
+                    <div class="software-card", harizontal>
+                    <img src="images/research/jctcce-largecover.jpg" alt="COMPASS">
+                    <h3>COMPASS</h3>
+                    <p>Communication Pathway Analysis within Protein-Nucleic Acid Complexes.</p>
+                    <a href="https://github.com/yasamankarami/compass" class="button">GitHub</a>
+                    <a href="https://pubs.acs.org/toc/jctcce/21/17" class="button">Paper</a>
+                    </div>
+                    <div class="software-card">
+                    <img src="images/research/Graphical_Abstract.png" alt="DynaRepo">
+                    <h3>DynaRepo</h3>
+                    <p>The repository of macromolecular conformational dynamics.</p>
+                    <a href="https://dynarepo.inria.fr/" class="button">Website</a>
+                    <a href="https://pubs.acs.org/toc/jctcce/21/17" class="button">Paper</a>
+                    </div>
+                    <div class="software-card">
+                    <img src="images/research/Graphical_Abstract_DynamicGT.png" alt="DynamicGT">
+                    <h3>DynamicGT</h3>
+                    <p>A Dynamic-Aware Geometric Transformer Model to Predict Protein Binding Interfaces in Flexible and Disordered Regions.</p>
+                    <a href="https://github.com/amisteromid/DynamicGT" class="button">GitHub</a>
+                    <a href="https://doi.org/10.1101/2025.03.04.641377" class="button">Paper</a>
+                    </div>
+                    <div class="software-card">
+                    <img src="images/research/Figure2_B.jpg" alt="ppIRIS">
+                    <h3>ppIRIS</h3>
+                    <p>Deep Learning for Proteome-Wide Prediction of Bacterial Protein-Protein Interactions.</p>
+                    <a href="https://github.com/lupiochi/ppIRIS" class="button">GitHub</a>
+                    <a href="https://doi.org/10.1101/2025.09.22.677885" class="button">Paper</a>
+                    </div>
+                    <div class="software-card">
+                    <img src="images/research/figure2_v2.png" alt="SURFACE-Bind">
+                    <h3>SURFACE-Bind</h3>
+                    <p>Mapping Targetable Sites on the Human Surfaceome for the Design of Novel Binders.</p>
+                    <a href="https://surface-bind.inria.fr/" class="button">Website</a>
+                    <a href="https://doi.org/10.1101/2024.12.16.628626" class="button">Paper</a>
+                    </div>
+                </ul>
             </div>
-            </div>
+        </div>
         </section>
     
         <!-- Publications Section -->
         <section id="publications" class="section">
             <div class="inner">
-                <h2>Publications</h2>
                 <ul class="publication-list" style="list-style: none; padding-left: 20px;">
                     <!-- The three most recent publications will be loaded here dynamically -->
                 </ul>
@@ -312,14 +381,121 @@
             </div>
         </section>
     
+
+        <!-- News Section -->
+        
+        <section id="news" class="section news-section">
+            <div class="inner">
+            <div class="news-cards">
+            
+            <h2>Latest News</h2>
+
+            <div class="news-card horizontal">
+                <div class="news-content">
+                    <h3>Nov/2025 – Feature Article on Antibody Engineering</h3>
+                    <p>Our recent advances in antibody engineering were highlighted in a feature article published by the Centre Inria at Université de Lorraine.</p>
+                </div>
+            </div>
+
+            <div class="news-card horizontal">
+                <div class="news-content">
+                    <h3>Oct/2025 – ANR-PIQ Award – 2025</h3>
+                    <p>Yasaman has been awarded the ANR-PIQ grant to advance research on protein allosteric signaling.</p>
+                </div>
+            </div>
+
+            <div class="news-card horizontal">
+            <div class="news-content">
+                <h3>Jan/2025 – ANR-JCJC (IDPFold) Award – 2025</h3>
+                <p>Hamed has been awarded the ANR-JCJC grant for the IDPFold project, focused on investigating folding-upon-binding mechanisms in intrinsically disordered proteins.</p>
+            </div>
+            </div>
+
+            <div class="news-card horizontal">
+            <div class="news-content">
+                <h3>Sep/2024 – ANR-PRC (VITAL) Award – 2024</h3>
+                <p>Hamed and collaborators have been awarded the ANR-PRC VITAL grant to support their collaborative research initiatives.</p>
+            </div>
+            </div>
+
+            <div class="news-card horizontal">
+            <div class="news-content">
+                <h3>Sep/2023 – ANR-PRC (GlycoLink) Award – 2023</h3>
+                <p>Hamed and collaborators have been awarded the ANR-PRC GlycoLink grant to advance research in glycoscience.</p>
+            </div>
+            </div>
+
+
+            <style>
+            .news-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                margin-top: 200px;
+                margin-bottom: 50px;
+                margin-left: 200px;
+                margin-right: 50px;
+            }
+            
+            .news-card.horizontal {
+                display: flex;
+                align-items: center;
+                background: rgba(255,255,255,0.05);
+                border-radius: 1px;
+                overflow: hidden;
+                padding: 10px;
+            }
+            
+            .image-container {
+                width: 50px;
+                height: 50px;
+                margin-right: 20px;
+                flex-shrink: 0;
+            }
+            
+            .news-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 4px;
+            }
+            
+            .news-content {
+                flex: 1;
+            }
+            
+            .news-content h3 {
+                margin: 0 0 5px 0;
+            }
+            
+            .news-content p {
+                margin: 0 0 5px 0;
+            }
+            
+            @media (max-width: 768px) {
+                .news-card.horizontal {
+                flex-direction: column;
+                text-align: center;
+                }
+                
+                .image-container {
+                margin: 0 0 15px 0;
+                }
+            }
+            </style>
+            </div>
+            </div>
+        </section>
+
+
         <!-- Open Positions Section -->
         <section id="positions" class="section">
             <div class="inner">
                 <h2>Open Positions</h2>
                 <p>We are looking for talented individuals to join our team. Check out our current opportunities below:</p>
                 <ul class="positions-list" style="list-style: none; padding-left: 0;">
-                    <li><strong>Postdoctoral Researcher</strong> - Expertise in computational methods (<a href="#">Apply here</a>).</li>
-                    <li><strong>Research Assistant</strong> - Experience in data analysis (<a href="#">Apply here</a>).</li>
+                    <li><strong>Postdoctoral Researcher</strong> - Expertise in Deep Learning (<a href="#">Send your application to hamed.khakzad@inria.fr</a>).</li>
+                    <li><strong>PhD Candidate</strong> - Experience in Deep Learning (<a href="#">Send your application to hamed.khakzad@inria.fr</a>).</li>
                 </ul>
             </div>
         </section>
@@ -671,7 +847,7 @@
       });
     });
     </script>
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function(){
           const slides = document.querySelectorAll('.dynamic-news-slider .news-slide');
           let currentSlide = 0;
@@ -681,7 +857,7 @@
             slides[currentSlide].classList.add('active');
           }, 4000);
         });
-      </script>
+      </script> -->
     
         
 </body>
