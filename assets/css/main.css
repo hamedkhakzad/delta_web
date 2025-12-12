@@ -4088,15 +4088,13 @@ input, select, textarea {
     margin-bottom: 100px;
 }
 
-  .research-topics ul {
-	list-style: none;
-	padding: 20px;
-	margin-top: 2rem;
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	flex-wrap: wrap;
-  }
+	.research-topics ul {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		align-items: stretch;
+	}
   
   .research-topics li {
 	background: rgb(64, 64, 64);
@@ -4362,44 +4360,66 @@ input, select, textarea {
 	margin-top: 2rem;
 	margin-bottom: 4rem; /* Added space at the bottom */
 }
-  .software-card {
-	background: rgba(39, 38, 38, 0.05);
-	border-radius: 8px;
-	padding: 1.5rem;
-	width: 300px;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .software-card:hover {
-	transform: translateY(-5px);
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  }
-  .software-card img {
-	max-width: 100%;
-	border-radius: 4px;
-  }
-  .software-card h3 {
-	margin: 1rem 0 0.5rem;
-	font-size: 1.5rem;
-	color: #404040;
-  }
-  .software-card p {
-	font-size: 1rem;
-	margin-bottom: 1rem;
-	color: rgba(56, 56, 56, 0.8);
-  }
-  .software-card .button {
-	background: #00355a;
-	color: #a0a0a0;
-	padding: 0.6rem 1.2rem;
-	border-radius: 4px;
+.software-card {
+    background: rgba(39, 38, 38, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    /* Use flex-basis instead of fixed width for better responsiveness */
+    flex: 0 1 350px;
+    /* Ensure minimum width so it doesn't get too squashed */
+    min-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Flex column to align content */
+    display: flex;
+    flex-direction: column;
+}
+.software-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.software-card img {
+    width: 100%;
+    /* Fix image height to ensure content starts at same level */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+.software-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+    color: #404040;
+}
+.software-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: rgba(56, 56, 56, 0.8);
+    flex-grow: 1; /* Pushes buttons to the bottom */
+}
+.card-buttons {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
 	justify-content: center;
-	display: inline;
-	text-decoration: none;
-	transition: background 0.2s ease;
-  }
+	width: 100%;
+	}
+.software-card .button {
+    background: #00355a;
+    color: #a0a0a0;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    justify-content: center;
+    display: inline-flex;
+    align-items: center; /* Centers text vertically */
+    text-decoration: none;
+    transition: background 0.2s ease;
+    height: auto; /* Reset fixed height */
+    line-height: 1.5; /* Reset line-height */
+}
+
   .software-card .button:hover {
-	background: #8f9190;
+    background: #8f9190;
   }
+
   
   /* Responsive adjustments for software section */
   @media screen and (max-width: 1280px) {
@@ -4431,33 +4451,54 @@ input, select, textarea {
 	}
   }
   
-  @media screen and (max-width: 736px) {
-	.software-section {
-	  padding: 2rem 1rem 4.5rem 1rem;
-	}
-	
-	.software-cards {
-	  gap: 1rem;
-	}
-	
-	.software-card {
-	  width: calc(50% - 0.5rem);
-	  padding: 1rem;
-	}
-	
-	.software-card h3 {
-	  font-size: 1.2rem;
-	  margin: 0.7rem 0 0.4rem;
-	}
-	
-	.software-card p {
-	  font-size: 0.9rem;
-	  margin-bottom: 0.8rem;
-	}
-	
-	.software-card .button {
-	  padding: 0.5rem 1rem;
-	  font-size: 0.9rem;
+@media screen and (max-width: 736px) {
+    .software-section {
+        padding: 2rem 1rem 4.5rem 1rem;
+    }
+
+    .software-cards {
+        gap: 1rem;
+    }
+
+    .software-card {
+        width: calc(50% - 0.5rem);
+        padding: 1rem;
+    }
+
+    .software-card h3 {
+        font-size: 1.2rem;
+        margin: 0.7rem 0 0.4rem;
+    }
+
+    .software-card p {
+        font-size: 0.9rem;
+        margin-bottom: 0.8rem;
+    }
+
+    /* Decrease button size on mobile */
+    .software-card .button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+        min-height: 0;
+    }
+
+    /* Bring tabs closer in sidebar */
+    #sidebar nav > ul {
+        gap: 0.5em;
+    }
+
+    /* Fix Publications formatting on mobile */
+    #publications .inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Fix narrow publication list on mobile caused by global UL margins */
+    #publications ul {
+        margin: 0 0 2em 0;
+        padding-left: 0;
+        padding-right: 0;
+		list-style: none;
 	}
   }
   
@@ -4601,7 +4642,7 @@ section.wrapper.full-page .inner {
 }
 
 #publications .inner {
-    padding-left: 150px;
+    padding-left: 70px;
     padding-right: 20px;
 	padding-top: 50px;
 }
@@ -4649,4 +4690,16 @@ section.wrapper.full-page .inner {
 .dropdown-item:hover {
     color: #000000;
     background: rgba(255, 255, 255, 0.05);
+}
+
+/* Publication Links */
+.pub-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+    border-bottom: 1px dotted rgba(0,0,0,0.3);
+}
+.pub-link:hover {
+    color: grey !important;
+    border-bottom-color: transparent;
 }

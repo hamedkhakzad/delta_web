@@ -56,26 +56,47 @@
 		#nav::-webkit-scrollbar {
 			display: none; /* Chrome, Safari, Edge */
 		}
-		#nav ul {
-			display: flex;
-			flex-wrap: nowrap;
+        #nav ul {
+            display: flex;
+            flex-wrap: nowrap;
             justify-content: center;
-			gap: 1rem;
-			padding: 0;
-			margin: 0 auto;
-			min-width: max-content; /* Ensure it expands to fit all items */
-		}
-		#nav li {
-			display: inline-block;
-			flex-shrink: 0; /* Prevent items from shrinking */
-		}
-		
-		/* Fix for mobile devices */
-		@media screen and (max-width: 736px) {
-			#sidebar .inner {
-            padding-right: 0;
-            padding-left: 0;
-            overflow-x: auto;
+            align-items: center; /* Added alignment */
+            gap: 1rem;
+            padding: 0;
+            margin: 0 auto;
+            min-width: max-content; /* Ensure it expands to fit all items */
+        }
+        #nav li {
+            display: inline-block;
+            flex-shrink: 0; /* Prevent items from shrinking */
+        }
+        
+        /* Logo Styling */
+        .nav-logo {
+            height: 60px; 
+            width: auto; 
+            vertical-align: middle;
+        }
+        .logo-item {
+            margin-right: 50px; /* Replaces the inline 400px */
+        }
+        
+        /* Fix for mobile devices */
+        @media screen and (max-width: 736px) {
+            #sidebar .inner {
+                padding-right: 0;
+                padding-left: 0;
+                overflow-x: auto;
+            }
+            .logo-item {
+                margin-right: 20px; /* Smaller margin on mobile */
+            }
+            .nav-logo {
+                height: 40px; /* Smaller logo on mobile */
+            }
+            /* Bring tabs closer */
+            #nav ul {
+                gap: 0.5rem;
             }
         }
     </style>
@@ -87,7 +108,7 @@
         <div class="inner">
             <nav id="nav">
                 <ul>
-                    <li><img src="images/logo_bar.png" alt="DELTA Logo" class="nav-logo" style="height: 60px; width: auto; margin-right: 400px; vertical-align: left;"></li>
+                    <li class="logo-item"><a href="#home" class="logo-link" style="border-bottom: none;"><img src="images/logo_bar.png" alt="DELTA Logo" class="nav-logo"></a></li>
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#team" class="nav-link">Team</a></li>
                     <li><a href="#research" class="nav-link">Research</a></li>
@@ -187,8 +208,8 @@
                         <span>PhD Candidate</span>
                     </div>
                     <div class="team-member">
-                        <img src="images/luiz.jpeg" alt="Luiz Felipe Piochi" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://x.com/piochimico', 'https://www.linkedin.com/in/luiz-piochi/', 'https://lupiochi.me/'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
-                        <a href="#" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://twitter.com/luizfelipe', 'https://www.linkedin.com/in/luiz-piochi/', 'https://lupiochi.me/'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
+                        <img src="images/luiz.jpeg" alt="Luiz Felipe Piochi" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://x.com/piochimico', 'https://www.linkedin.com/in/luiz-piochi/', 'https://luizpiochi.com/'); return false;" style="cursor: pointer; user-select: none; -webkit-user-drag: none;" oncontextmenu="return false;" />
+                        <a href="#" onclick="copyContact(event, 'luiz-felipe.caparelli-piochi@inria.fr', 'https://twitter.com/luizfelipe', 'https://www.linkedin.com/in/luiz-piochi/', 'https://luizpiochi.com/'); return false;" style="text-decoration: none; border-bottom: none;">Contact</a>
                         <span><strong>Luiz Felipe Piochi</strong></span>
                         <span>PhD Candidate</span>
                     </div>
@@ -287,32 +308,33 @@
                 border-radius: 4px;
             }
             
-            .news-content-research {
-                flex: 1;
-            }
-            
-            .news-content-research h3 {
-                margin: 0 0 5px 0;
-            }
-            
             .news-content-research p {
                 margin: 0 0 5px 0;
             }
             
             @media (max-width: 768px) {
+                /* Fix Research Section Mobile Formatting */
+                .news-cards-research {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
                 .news-card-research.horizontal {
-                flex-direction: column;
-                text-align: center;
+                    flex-direction: column;
+                    text-align: center;
                 }
                 
                 .image-container-research {
-                margin: 0 0 15px 0;
+                    width: 100%;
+                    height: auto;
+                    margin: 0 0 20px 0;
                 }
             }
             </style>
             </div>
             </div>
         </section>
+
 
         <!-- Research Modal (Overlay) -->
         <div id="research-modal" class="modal">
@@ -326,44 +348,54 @@
             
         <!-- Software Section -->
         <section id="software" class="section software-section">
-        <div class="inner; style="padding: 50px;">
+        <div class="inner" style="padding: 50px;">
             <!-- Research Topics List -->
             <div class="research-topics" style="margin-bottom: 50px; margin-left: -50px; margin-right: -120px;">
                 <ul>
-                    <div class="software-card", harizontal>
+                    <div class="software-card">
                     <img src="images/research/jctcce-largecover.jpg" alt="COMPASS">
                     <h3>COMPASS</h3>
                     <p>Communication Pathway Analysis within Protein-Nucleic Acid Complexes.</p>
-                    <a href="https://github.com/yasamankarami/compass" class="button">GitHub</a>
-                    <a href="https://pubs.acs.org/toc/jctcce/21/17" class="button">Paper</a>
+                    <div class="card-buttons">
+                        <a href="https://github.com/yasamankarami/compass" class="button">GitHub</a>
+                        <a href="https://pubs.acs.org/toc/jctcce/21/17" class="button">Paper</a>
+                    </div>
                     </div>
                     <div class="software-card">
                     <img src="images/research/Graphical_Abstract.png" alt="DynaRepo">
                     <h3>DynaRepo</h3>
                     <p>The repository of macromolecular conformational dynamics.</p>
-                    <a href="https://dynarepo.inria.fr/" class="button">Website</a>
-                    <a href="https://pubs.acs.org/toc/jctcce/21/17" class="button">Paper</a>
+                    <div class="card-buttons">
+                        <a href="https://dynarepo.inria.fr/" class="button">Website</a>
+                        <a href="https://pubs.acs.org/toc/jctcce/21/17" class="button">Paper</a>
+                    </div>
                     </div>
                     <div class="software-card">
                     <img src="images/research/Graphical_Abstract_DynamicGT.png" alt="DynamicGT">
                     <h3>DynamicGT</h3>
                     <p>A Dynamic-Aware Geometric Transformer Model to Predict Protein Binding Interfaces in Flexible and Disordered Regions.</p>
-                    <a href="https://github.com/amisteromid/DynamicGT" class="button">GitHub</a>
-                    <a href="https://doi.org/10.1101/2025.03.04.641377" class="button">Paper</a>
+                    <div class="card-buttons">
+                        <a href="https://github.com/amisteromid/DynamicGT" class="button">GitHub</a>
+                        <a href="https://doi.org/10.1101/2025.03.04.641377" class="button">Paper</a>
+                    </div>
                     </div>
                     <div class="software-card">
                     <img src="images/research/Figure2_B.jpg" alt="ppIRIS">
                     <h3>ppIRIS</h3>
                     <p>Deep Learning for Proteome-Wide Prediction of Bacterial Protein-Protein Interactions.</p>
-                    <a href="https://github.com/lupiochi/ppIRIS" class="button">GitHub</a>
-                    <a href="https://doi.org/10.1101/2025.09.22.677885" class="button">Paper</a>
+                    <div class="card-buttons">
+                        <a href="https://github.com/lupiochi/ppIRIS" class="button">GitHub</a>
+                        <a href="https://doi.org/10.1101/2025.09.22.677885" class="button">Paper</a>
+                    </div>
                     </div>
                     <div class="software-card">
                     <img src="images/research/figure2_v2.png" alt="SURFACE-Bind">
                     <h3>SURFACE-Bind</h3>
                     <p>Mapping Targetable Sites on the Human Surfaceome for the Design of Novel Binders.</p>
-                    <a href="https://surface-bind.inria.fr/" class="button">Website</a>
-                    <a href="https://doi.org/10.1101/2024.12.16.628626" class="button">Paper</a>
+                    <div class="card-buttons">
+                        <a href="https://surface-bind.inria.fr/" class="button">Website</a>
+                        <a href="https://doi.org/10.1101/2024.12.16.628626" class="button">Paper</a>
+                    </div>
                     </div>
                 </ul>
             </div>
@@ -481,13 +513,20 @@
             }
             
             @media (max-width: 768px) {
+                /* Fix News Section Mobile Formatting */
+                .news-cards {
+                    margin-left: 10px;
+                    margin-right: 10px;
+                }
+
                 .news-card.horizontal {
-                flex-direction: column;
-                text-align: center;
+                    flex-direction: column;
+                    text-align: center;
                 }
                 
                 .image-container {
-                margin: 0 0 15px 0;
+                    margin: 0 0 15px
+
                 }
             }
             </style>
@@ -510,20 +549,16 @@
                     <p><strong>By train:</strong> From Nancy Gare, take the trolleybus (T1, direction Vandoeuvre-CHU; you can buy tickets at the station or through the <a href="https://www.reseau-stan.com/titres-tarifs/points-de-vente/nemo-mticket" target="_blank">NéMO app</a>). Get off at Vélodrome, then walk about 5 minutes to the campus.</p>
                     <p><strong>By air:</strong> The nearest major airports are in Paris (CDG) or Luxembourg (LUX). From CDG, take the TGV to Lorraine TGV and then the shuttle bus to Nancy Gare.</p>
                     <br>
+
+                    <!-- Subtle Credits -->
+                    <div style="margin-top: 50px; font-size: 0.8rem; opacity: 0.6; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 20px;">
+                        Built by <a href="https://luizpiochi.com/" target="_blank" style="border-bottom: none; color: inherit;">Luiz Felipe Piochi</a>.
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-    
-    <!-- Footer
-    <footer id="footer">
-        <div class="inner">
-            <ul class="menu">
-                <li>DELTA @ Inria</li>
-                <li>Built by <a href="https://lupiochi.me/">Luiz Felipe Piochi</a>.</li>
-            </ul>
-        </div>
-    </footer> -->
+
     
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -564,7 +599,9 @@
             $('.nav-link[href="'+initialSection+'"]').addClass('active');
             
             // Navigation click handler for internal links
-            $('.nav-link').on('click', function(e){
+            // Updated selector to include .logo-link
+            $('.nav-link, .logo-link').on('click', function(e){
+
                 var href = $(this).attr('href');
                 if(href === "#" || href === "") return;
                 // For external links or .html links, navigate normally
@@ -577,14 +614,21 @@
                     return;
                 }
                 e.preventDefault();
+                
+                // Prevent overlap: Stop all animations and hide other sections immediately
+                var $target = $(href);
+                if ($target.hasClass('active')) return; // Already active
+
                 history.pushState({}, '', href);
-                $('.section.active').fadeOut(300, function(){
-                    $(this).removeClass('active');
-                    $(href).fadeIn(300, function(){
-                        $(this).addClass('active');
-                    });
-                });
+                
+                // Stop running animations, hide all sections, remove active class
+                $('.section').stop(true, true).hide().removeClass('active');
+                
+                // Fade in the target section
+                $target.fadeIn(300).addClass('active');
+
                 $('.nav-link').removeClass('active');
+                // Update active state for all links pointing to this section (including logo)
                 $('.nav-link[href="'+href+'"]').addClass('active');
             });
         });
@@ -836,7 +880,7 @@
             
             // Title with link if available
             if (pub.link) {
-              pubHTML += `"<a href="${pub.link}" target="_blank" style="text-decoration: none; color: inherit;">${pub.title}</a>." `;
+              pubHTML += `"<a href="${pub.link}" target="_blank" class="pub-link">${pub.title}</a>." `;
             } else {
               pubHTML += `"${pub.title}." `;
             }
@@ -850,7 +894,7 @@
             
             // DOI link if available
             if (pub.doi) {
-              pubHTML += `, <a href="https://doi.org/${pub.doi}" target="_blank" style="text-decoration: none; color: inherit;">Link</a>`;
+              pubHTML += `, <a href="https://doi.org/${pub.doi}" target="_blank" class="pub-link">Link</a>`;
             }
             
             pubHTML += `.`;
