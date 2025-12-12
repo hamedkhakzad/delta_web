@@ -99,6 +99,29 @@
                 gap: 0.5rem;
             }
         }
+
+        /* Network Animation Banner */
+        .network-banner-container {
+            width: 100%;
+            max-width: 800px;
+            height: 300px; /* Desktop height */
+            margin: -2rem auto 1.5rem auto; /* Negative top margin to push up */
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #network-canvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        @media screen and (max-width: 736px) {
+            .network-banner-container {
+                height: 150px; /* Much smaller on mobile */
+                margin-top: 0; 
+            }
+        }
     </style>
 </head>
 
@@ -143,10 +166,12 @@
                     DELTA — Dynamics-aware data-driven approaches for macromolecular complexes and design.
                 </figcaption>
             </figure> -->
-            <!-- Small Square Logo Image -->
-            <div class="logo-container fade-in" style="animation-delay: 0s; margin-bottom: 1.5rem; text-align: center;">
-                <img src="images/logo.png" alt="DELTA Logo" class="square-logo" style="width: 300px; height: 300px; border-radius: 1px; object-fit: cover;">
+            
+            <!-- Network Animation Banner (Replaces Logo) -->
+            <div class="network-banner-container fade-in" style="animation-delay: 0s;">
+                <canvas id="network-canvas"></canvas>
             </div>
+
             <h1 class="fade-in" style="animation-delay: 0s;">Delta Research Team at Inria</h1>
             <h4 class="home-section-p">Dynamics-aware data-driven approaches for macromolecular complexes and design</h4>
             
@@ -568,6 +593,156 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/publications.js"></script>
+    <script>
+        // Network Animation Script
+        function initNetworkAnimation(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width, height;
+            let particles = [];
+            
+            // Configuration
+            const config = {
+                particleCount: 60,
+                connectionDistance: 100,
+                mouseDistance: 150,
+                baseSpeed: 0.5
+            };
+
+            const mouse = { x: null, y: null };
+
+            class Particle {
+                constructor() {
+                    this.x = Math.random() * width;
+                    this.y = Math.random() * height;
+                    this.vx = (Math.random() - 0.5) * config.baseSpeed;
+                    this.vy = (Math.random() - 0.5) * config.baseSpeed;
+                    this.size = Math.random() * 2 + 1;
+                }
+
+                update() {
+                    this.x += this.vx;
+                    this.y += this.vy;
+
+                    // Bounce off edges
+                    if (this.x < 0 || this.x > width) this.vx *= -1;
+                    if (this.y < 0 || this.y > height) this.vy *= -1;
+
+                    // Mouse interaction (Repulsion)
+                    if (mouse.x != null) {
+                        let dx = mouse.x - this.x;
+                        let dy = mouse.y - this.y;
+                        let distance = Math.sqrt(dx * dx + dy * dy);
+                        if (distance < config.mouseDistance) {
+                            const forceDirectionX = dx / distance;
+                            const forceDirectionY = dy / distance;
+                            const force = (config.mouseDistance - distance) / config.mouseDistance;
+                            const directionX = forceDirectionX * force * 3; 
+                            const directionY = forceDirectionY * force * 3;
+                            this.x -= directionX;
+                            this.y -= directionY;
+                        }
+                    }
+                }
+
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                    // CHANGE DOT COLOR HERE
+                    ctx.fillStyle = '#2dd4bf'; // Currently Teal
+                    ctx.fill();
+                }
+            }
+
+            function init() {
+                // Adjust config based on screen size
+                if (window.innerWidth < 768) {
+                    config.particleCount = 30;
+                    config.connectionDistance = 80;
+                } else {
+                    config.particleCount = 60;
+                    config.connectionDistance = 100;
+                }
+
+                particles = [];
+                for (let i = 0; i < config.particleCount; i++) {
+                    particles.push(new Particle());
+                }
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, width, height);
+                
+                // Update and draw particles
+                particles.forEach(p => {
+                    p.update();
+                    p.draw();
+                });
+
+                // Draw connections
+                connect();
+                
+                requestAnimationFrame(animate);
+            }
+
+            function connect() {
+                for (let a = 0; a < particles.length; a++) {
+                    for (let b = a; b < particles.length; b++) {
+                        let distance = ((particles[a].x - particles[b].x) ** 2) + ((particles[a].y - particles[b].y) ** 2);
+                        if (distance < (config.connectionDistance ** 2)) {
+                            let opacity = 1 - (distance / (config.connectionDistance ** 2));
+
+                            // CHANGE LINE COLOR HERE (Keep the ${opacity} part for the fade effect)
+                            // Format: rgba(red, green, blue, opacity)
+                            ctx.strokeStyle = `rgba(12, 12, 12, ${opacity * 0.5})`; // Currently Teal
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(particles[a].x, particles[a].y);
+                            ctx.lineTo(particles[b].x, particles[b].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            function resize() {
+                // Get parent width for responsive canvas
+                const parent = canvas.parentElement;
+                if (parent) {
+                    width = parent.clientWidth;
+                    height = parent.clientHeight;
+                    canvas.width = width;
+                    canvas.height = height;
+                }
+            }
+
+            window.addEventListener('resize', () => {
+                resize();
+                if(width > 0) init(); 
+            });
+            
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                mouse.x = e.clientX - rect.left;
+                mouse.y = e.clientY - rect.top;
+            });
+            
+            canvas.addEventListener('mouseleave', () => {
+                mouse.x = null;
+                mouse.y = null;
+            });
+
+            resize();
+            init();
+            animate();
+        }
+
+        // Initialize animation when DOM is ready
+        $(document).ready(function() {
+            initNetworkAnimation('network-canvas');
+        });
+    </script>
     <script>
         // Navigation and section switching scripts
         $(document).ready(function(){
