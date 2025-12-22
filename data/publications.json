@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "title": "DynamicGT: a dynamic-aware geometric transformer model to predict protein binding interfaces in flexible and disordered regions",
+      "authors": "Omid Mokhtari, Sergei Grudinin, Yasaman Karami, Hamed Khakzad",
+      "year": "2025",
+      "journal": "Cell Systems",
+      "doi": "",
+      "link": "https://authors.elsevier.com/a/1mJab_siQzoTA-",
+      "tags": []
+    },    
+    {
       "title": "DynaRepo: the repository of macromolecular conformational dynamics",
       "authors": "Omid Mokhtari, Emmanuelle Bignon, Hamed Khakzad, Yasaman Karami",
       "year": "2025",
@@ -34,15 +43,6 @@
       "journal": "Cell Systems",
       "doi": "",
       "link": "https://www.cell.com/cell-systems/abstract/S2405-4712(25)00202-9",
-      "tags": []
-    },
-    {
-      "title": "DynamicGT: a dynamic-aware geometric transformer model to predict protein binding interfaces in flexible and disordered regions",
-      "authors": "Omid Mokhtari, Sergei Grudinin, Yasaman Karami, Hamed Khakzad",
-      "year": "2025",
-      "journal": "bioRxiv",
-      "doi": "",
-      "link": "https://www.biorxiv.org/content/10.1101/2025.03.04.641377.abstract",
       "tags": []
     },
     {
