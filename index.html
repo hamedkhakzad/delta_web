@@ -188,19 +188,79 @@
             </ul>
         </div>
         <!-- Footer Section -->
-        <footer style="background: rgba(0, 0, 0, 0); padding: 10px 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
-            <div style="max-width: 1600px; margin: 0 auto;">
-            <h3 style="margin-bottom: 25px;">Affiliated Partners & Funders</h3>
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; margin-bottom: 20px;">
-                <img src="images/logos/inria.png" alt="Inria" style="height: 60px; object-fit: contain;">
-                <img src="images/logos/ul.png" alt="Université de Lorraine" style="height: 60px; object-fit: contain;">
-                <img src="images/logos/region.png" alt="La Region Grand Est" style="height: 60px; object-fit: contain;">
-                <img src="images/logos/mddb.svg" alt="MDDB" style="height: 60px; object-fit: contain;">
-                <img src="images/logos/rc.png" alt="Rosetta Commons" style="height: 60px; object-fit: contain;">
-                <img src="images/logos/anr.png" alt="ANR" style="height: 60px; object-fit: contain;">
-                <img src="images/logos/enact.png" alt="ENACT Cluster" style="height: 60px; object-fit: contain;">
-            </div>
-            <p style="opacity: 0.7; font-size: 0.9rem;">© 2025 DELTA Research Team at Inria. All rights reserved.</p>
+        <footer class="site-footer" style="background: rgba(0, 0, 0, 0); text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+            <style>
+                /* Footer responsive styles scoped to the footer */
+                .site-footer .footer-inner {
+                    max-width: 1400px;
+                    margin: 0 auto;
+                    padding: 0px 10px;
+                }
+                .site-footer h3 {
+                    margin-bottom: 16px;
+                }
+                .site-footer .logos {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 20px;
+                    margin-bottom: 10px;
+                    padding: 0 8px;
+                }
+                .site-footer .logos img {
+                    height: 40px;
+                    width: auto;
+                    max-width: 180px;
+                    object-fit: contain;
+                    display: inline-block;
+                }
+                .site-footer .copyright {
+                    opacity: 0.7;
+                    font-size: 0.9rem;
+                    margin-top: 8px;
+                }
+
+                /* Smaller devices */
+                @media (max-width: 768px) {
+                    .site-footer .footer-inner {
+                        padding: 0px 0px;
+                    }
+                    .site-footer .logos img {
+                        height: 48px;
+                        max-width: 120px;
+                    }
+                }
+
+                /* Very small phones */
+                @media (max-width: 420px) {
+                    .site-footer .logos {
+                        gap: 12px;
+                    }
+                    .site-footer .logos img {
+                        height: 40px;
+                        max-width: 90px;
+                    }
+                    .site-footer h3 {
+                        font-size: 1rem;
+                    }
+                    .site-footer .copyright {
+                        font-size: 0.8rem;
+                    }
+                }
+            </style>
+
+            <div class="footer-inner">
+                <h3>Affiliated Partners & Funders</h3>
+                <div class="logos" aria-label="Affiliated partners logos">
+                    <img src="images/logos/inria.png" alt="Inria">
+                    <img src="images/logos/ul.png" alt="Université de Lorraine">
+                    <img src="images/logos/region.png" alt="La Region Grand Est">
+                    <img src="images/logos/mddb.svg" alt="MDDB">
+                    <img src="images/logos/rc.png" alt="Rosetta Commons">
+                    <img src="images/logos/anr.png" alt="ANR">
+                </div>
+                <p class="copyright">© 2025 DELTA Research Team at Inria. All rights reserved.</p>
             </div>
         </footer>
         </section>
