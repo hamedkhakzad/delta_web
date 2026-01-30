@@ -4534,6 +4534,111 @@ input, select, textarea {
 	}
   }
 
+/* Horizontal software list */
+.software-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* One tool row */
+.software-row {
+    display: flex;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.software-row:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+/* Left image */
+.software-row img {
+    width: 320px;
+    height: 240px;
+    object-fit: contain; /* change to cover for uniform representation */
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+/* Right content */
+.software-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.software-content h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.6rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+    color: #404040;
+}
+
+.software-content p {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    color: rgba(56, 56, 56, 0.8);
+    max-width: 700px;
+	margin-bottom: 0.6rem;
+}
+
+/* Links */
+.software-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.software-meta p {
+    margin: 0.2rem 0;
+    font-size: 1.1rem;
+    color: rgba(56, 56, 56, 0.85);
+}
+
+.software-meta strong {
+    font-weight: 600;
+    color: #303030;
+}
+
+/* Clean academic link style */
+.software-meta a {
+    color: #1a5fb4;
+	font-size: 1.1rem;
+    text-decoration: none;
+    word-break: break-word;
+}
+
+.software-meta a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+    .software-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .software-row img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .software-links {
+        justify-content: center;
+    }
+}
+
+
 /* Make each section occupy full viewport height */
 section.wrapper.full-page {
 	min-height: 100vh;
