@@ -1,9 +1,18 @@
 {
   "publications": [
     {
+      "title": "Mapping targetable sites on the human surfaceome for the design of novel binders",
+      "authors": "Petra Balbi, Ahmed Sadek, Anthony Marchand, Yi Yu, Jovan Damjanovic, Sandrine Georgeon, ..., Che Yang, Hamed Khakzad, Bruno Correia",
+      "year": "2026",
+      "journal": "PNAS",
+      "doi": "",
+      "link": "https://www.pnas.org/doi/10.1073/pnas.2506269123",
+      "tags": []
+    },
+    {
       "title": "DynamicGT: a dynamic-aware geometric transformer model to predict protein binding interfaces in flexible and disordered regions",
       "authors": "Omid Mokhtari, Sergei Grudinin, Yasaman Karami, Hamed Khakzad",
-      "year": "2025",
+      "year": "2026",
       "journal": "Cell Systems",
       "doi": "",
       "link": "https://authors.elsevier.com/a/1mJab_siQzoTA-",
@@ -12,10 +21,19 @@
     {
       "title": "DynaRepo: the repository of macromolecular conformational dynamics",
       "authors": "Omid Mokhtari, Emmanuelle Bignon, Hamed Khakzad, Yasaman Karami",
-      "year": "2025",
+      "year": "2026",
       "journal": "Nucleic Acids Research",
       "doi": "",
       "link": "https://academic.oup.com/nar/advance-article/doi/10.1093/nar/gkaf1130/8322558",
+      "tags": []
+    },
+    {
+      "title": "InterMap: Accelerated Detection of Interaction Fingerprints on Large-Scale Molecular Ensembles",
+      "authors": "Ernesto Fajardo-Díaz, Emmanuelle Bignon, François Dehez, Yasaman Karami, Roy González-Alemán",
+      "year": "2025",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.64898/2025.12.15.694195.full.pdf",
       "tags": []
     },
     {
@@ -97,15 +115,6 @@
       "journal": "Nature Communications",
       "doi": "",
       "link": "https://www.nature.com/articles/s41467-024-54173-6",
-      "tags": []
-    },
-    {
-      "title": "Mapping targetable sites on the human surfaceome for the design of novel binders",
-      "authors": "Ahmed Sadek, Anthony Marchand, Yi Yu, Jovan Damjanovic, Sandrine Georgeon, ..., Che Yang, Hamed Khakzad",
-      "year": "2024",
-      "journal": "bioRxiv",
-      "doi": "",
-      "link": "https://www.biorxiv.org/content/10.1101/2024.12.16.628626.abstract",
       "tags": []
     },
     {
