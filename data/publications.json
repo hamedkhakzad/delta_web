@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "title": "Rapid Proteome-Wide Discovery of Protein–Protein Interactions With ppIRIS",
+      "authors": "Luiz Felipe Piochi, Di Tang, Johan Malmström, Yasaman Karami, Hamed Khakzad",
+      "year": "2026",
+      "journal": "Advanced Science",
+      "doi": "https://doi.org/10.1002/advs.202521310",
+      "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202521310",
+      "tags": []
+    },
+    {
       "title": "Mapping targetable sites on the human surfaceome for the design of novel binders",
       "authors": "Petra Balbi, Ahmed Sadek, Anthony Marchand, Yi Yu, Jovan Damjanovic, Sandrine Georgeon, ..., Che Yang, Hamed Khakzad, Bruno Correia",
       "year": "2026",
@@ -34,15 +43,6 @@
       "journal": "bioRxiv",
       "doi": "",
       "link": "https://www.biorxiv.org/content/10.64898/2025.12.15.694195.full.pdf",
-      "tags": []
-    },
-    {
-      "title": "ppIRIS: deep learning for proteome-wide prediction of bacterial protein-protein interactions",
-      "authors": "Luiz Felipe Piochi, Di Tang, Johan Malmström, Yasaman Karami, Hamed Khakzad",
-      "year": "2025",
-      "journal": "bioRxiv",
-      "doi": "",
-      "link": "https://www.biorxiv.org/content/10.1101/2025.09.22.677885.full.pdf",
       "tags": []
     },
     {
