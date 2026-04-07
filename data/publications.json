@@ -1,11 +1,20 @@
 {
   "publications": [
     {
+      "title": "Phospholipid-driven conformational switching of HCV NS5A links protein folding to replication membrane remodeling",
+      "authors": "Anna V. Bulankina, Rebecca M. Richter, James H. Nettles, Daisuke Yamane, Christian Grimm, Yasaman Karami, Richard A. Stanton,  Bianca Introini, Jonas Hermann, Hanaa Charif, Mia S. König, Claudia Stroß, Cristina Ortiz, Nico Kraus, Daniel Wood, Facundo Galceran, Rupert Abele, Bernard Maigret,  Raymond F. Schinazi,  Stefan Zeuzem, Ricardo M. Biondi,  MinKyung Yi, Robert Tampé,  Mikhail Kudryashev, Christoph Welsch",
+      "year": "2026",
+      "journal": "Science Advances",
+      "doi": "",
+      "link": "https://www.science.org/doi/full/10.1126/sciadv.aeb8863?af=R",
+      "tags": []
+    },
+    {
       "title": "Rapid Proteome-Wide Discovery of Protein–Protein Interactions With ppIRIS",
       "authors": "Luiz Felipe Piochi, Di Tang, Johan Malmström, Yasaman Karami, Hamed Khakzad",
       "year": "2026",
       "journal": "Advanced Science",
-      "doi": "https://doi.org/10.1002/advs.202521310",
+      "doi": "",
       "link": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/advs.202521310",
       "tags": []
     },
