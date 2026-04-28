@@ -1,6 +1,27 @@
 {
   "publications": [
     {
+      "title": "Unraveling protein conformational plasticity with PROTEUS",
+      "authors": "Luiz Felipe Piochi, Yasaman Karami, Hamed Khakzad",
+      "year": "2026",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.27.721098v1",
+      "tags": []
+    },
+    {
+      "title": "Structural basis of the two-photon photoactivation mechanism of orange carotenoid protein",
+      "authors": "Rory J.L. Munro,  Elena A. Andreeva, Elisabeth Hartmann,  Quentin Goor,  Hosni El Zein,  Stanislaw Nizinski,  Adjele Wilson,  Elke De Zitter,  Gregory Effantin,  Nicolas Coquelle,  Ninon Zala,  Martin V. Appleby, Shira Bar-Zvi,  Camila Bacellar,  Emma Beale,  Emmanuelle Bignon,  Bernhard Brutscher,  Martin Byrdin,  Claudio Cirelli,  Florian Dworkowski, Lutz Foucar,  Guillaume Gotthard,  Alexander Gorel, Marie Luise Grunbein,  Mario Hilpert,  Philip J.M. Johnson,  Marco Kloos,  Gregory Knoop,  Karol Nass, Gabriella Nass Kovacs,  Dmitry Ozerov,  Christopher J. Milne, Gotard Burdinski,  Christophe Chipot,  Yasaman Karami,  Francois Dehez,  Martin Weik,  R. Bruce Doak,  Robert L. Shoeman,  Giorgio Schiro,  Michel Sliwa,  Diana Kirilovsky,  Ilme Schlichting,  Jacques-Philippe Colletier",
+      "year": "2026",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.04.21.718960v1.abstract",
+      "tags": []
+    },
+
+
+
+    {
       "title": "Phospholipid-driven conformational switching of HCV NS5A links protein folding to replication membrane remodeling",
       "authors": "Anna V. Bulankina, Rebecca M. Richter, James H. Nettles, Daisuke Yamane, Christian Grimm, Yasaman Karami, Richard A. Stanton,  Bianca Introini, Jonas Hermann, Hanaa Charif, Mia S. König, Claudia Stroß, Cristina Ortiz, Nico Kraus, Daniel Wood, Facundo Galceran, Rupert Abele, Bernard Maigret,  Raymond F. Schinazi,  Stefan Zeuzem, Ricardo M. Biondi,  MinKyung Yi, Robert Tampé,  Mikhail Kudryashev, Christoph Welsch",
       "year": "2026",
