@@ -19,8 +19,6 @@
       "tags": []
     },
 
-
-
     {
       "title": "Phospholipid-driven conformational switching of HCV NS5A links protein folding to replication membrane remodeling",
       "authors": "Anna V. Bulankina, Rebecca M. Richter, James H. Nettles, Daisuke Yamane, Christian Grimm, Yasaman Karami, Richard A. Stanton,  Bianca Introini, Jonas Hermann, Hanaa Charif, Mia S. König, Claudia Stroß, Cristina Ortiz, Nico Kraus, Daniel Wood, Facundo Galceran, Rupert Abele, Bernard Maigret,  Raymond F. Schinazi,  Stefan Zeuzem, Ricardo M. Biondi,  MinKyung Yi, Robert Tampé,  Mikhail Kudryashev, Christoph Welsch",
@@ -69,10 +67,10 @@
     {
       "title": "InterMap: Accelerated Detection of Interaction Fingerprints on Large-Scale Molecular Ensembles",
       "authors": "Ernesto Fajardo-Díaz, Emmanuelle Bignon, François Dehez, Yasaman Karami, Roy González-Alemán",
-      "year": "2025",
-      "journal": "bioRxiv",
+      "year": "2026",
+      "journal": "Journal of Chemical Theory and Computation",
       "doi": "",
-      "link": "https://www.biorxiv.org/content/10.64898/2025.12.15.694195.full.pdf",
+      "link": "https://pubs.acs.org/doi/10.1021/acs.jctc.6c00083",
       "tags": []
     },
     {
@@ -247,15 +245,6 @@
       "tags": []
     },
     {
-      "title": "Analysis of the polar residues located at the head domain of focal adhesion protein vinculin under the presence of the Shigella effector IpaA and its possible implications during in vivo mechanotransduction",
-      "authors": "Benjamin Cocom, Hamed Khakzad, Cesar Valencia, Guy Tran Van",
-      "year": "2022",
-      "journal": "bioRxiv",
-      "doi": "",
-      "link": "https://www.biorxiv.org/content/10.1101/2022.11.23.517744.abstract",
-      "tags": []
-    },
-    {
       "title": "Bat coronaviruses related to SARS-CoV-2 and infectious for human cells",
       "authors": "Sarah Temmam, Yasaman Karami, Khamsing Vongphayloth, Eduard Baquero, Sandie Munier, ..., Der Werf, Marc Eloit",
       "year": "2022",
@@ -346,12 +335,12 @@
       "tags": []
     },
     {
-      "title": "Deciphering the Conformational Dynamics of Escherichia coli Type IV Pilus",
-      "authors": "Yasaman Karami, Olivera Francetic, Nadia Izadi Pruneyre, Michael Nilges",
-      "year": "2021",
-      "journal": "Biophysical Journal",
+      "title": "Macromolecular modeling and design in Rosetta: recent methods and frameworks",
+      "authors": "Julia Koehler Leman, Brian D Weitzner, Steven M Lewis, Jared Adolf-Bryfogle, Nawsad Alam, Rebecca F Alford, Melanie Aprahamian, David Baker, ..., Hamed Khakzad, ..., Andrew Watkins, Lior Zimmerman, Richard Bonneau",
+      "year": "2020",
+      "journal": "Nature Methods",
       "doi": "",
-      "link": "https://www.cell.com/biophysj/fulltext/S0006-3495(20)32792-2",
+      "link": "https://www.nature.com/articles/s41592-020-0848-2",
       "tags": []
     },
     {
@@ -424,6 +413,15 @@
       "journal": "Scientific Reports",
       "doi": "",
       "link": "https://www.nature.com/articles/s41598-018-34508-2",
+      "tags": []
+    }
+    {
+      "title": "“Dissecting protein architecture with communication blocks and communicating segment pairs",
+      "authors": "Yasaman Karami, Elodie Laine, Alessandra Carbone",
+      "year": "2016",
+      "journal": "BMC Bioinformatics",
+      "doi": "",
+      "link": "https://link.springer.com/article/10.1186/s12859-015-0855-y",
       "tags": []
     }
   ]
