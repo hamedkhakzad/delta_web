@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "title": "Benchmark Bias and Conformational Dynamics in Allosteric Site Prediction",
+      "authors": "Victor Pryakhin, Malika Smail-Tabbone, Yasaman Karami",
+      "year": "2026",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://doi.org/10.64898/2026.05.22.727284",
+      "tags": []
+    },
+    {
       "title": "Unraveling protein conformational plasticity with PROTEUS",
       "authors": "Luiz Felipe Piochi, Yasaman Karami, Hamed Khakzad",
       "year": "2026",
