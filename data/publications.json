@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "title": "Beyond Static Snapshots: A Large-Scale Dataset for Dynamics-Aware Protein-Nucleic Acid Modeling",
+      "authors": "Luiz Felipe Piochi, Omid Mokhtari, Hamed Khakzad, Yasaman Karami",
+      "year": "2026",
+      "journal": "ICML2026-AI4Science Workshop",
+      "doi": "",
+      "link": "https://openreview.net/pdf?id=sfhppIXMTa",
+      "tags": []
+    },
+    {
       "title": "Benchmark Bias and Conformational Dynamics in Allosteric Site Prediction",
       "authors": "Victor Pryakhin, Malika Smail-Tabbone, Yasaman Karami",
       "year": "2026",
