@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "title": "BindCORE: Biophysical Ensemble Learning for Predicting Interaction Sites in Intrinsically Disordered Regions",
+      "authors": "Nicolas Buton, Luiz Felipe Piochi, Hamed Khakzad",
+      "year": "2026",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.08.20.746047v1",
+      "tags": []
+    },
+    {
       "title": "Beyond Static Snapshots: A Large-Scale Dataset for Dynamics-Aware Protein-Nucleic Acid Modeling",
       "authors": "Luiz Felipe Piochi, Omid Mokhtari, Hamed Khakzad, Yasaman Karami",
       "year": "2026",
