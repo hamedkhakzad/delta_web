@@ -209,8 +209,17 @@
       "tags": []
     },
     {
+      "title": "A new age in protein design empowered by deep learning",
+      "authors": "Hamed Khakzad, Ilia Igashov, Arne Schneuing, Casper Goverde, Michael Bronstein, Bruno Correia",
+      "year": "2023",
+      "journal": "Cell Systems",
+      "doi": "",
+      "link": "https://www.cell.com/cell-systems/fulltext/S2405-4712(23)00298-3",
+      "tags": []
+    },
+    {
       "title": "De novo protein design by inversion of the AlphaFold structure prediction network",
-      "authors": "Benedict Wolf, Hamed Khakzad, Stéphane Rosset",
+      "authors": "Casper A Goverde, Benedict Wolf, Hamed Khakzad, Stéphane Rosset, Bruno E Correia",
       "year": "2023",
       "journal": "Protein Science",
       "doi": "",
