@@ -1,6 +1,15 @@
 {
   "publications": [
     {
+      "title": "SIMORGH: Ensemble-Aware Geometric Deep Learning for Apo-State and Cryptic Ligand Binding Site Prediction",
+      "authors": "Omid Mokhtari, Amirhossein Naghsh Nilchi, Björn Grüning, Yasaman Karami, Hamed Khakzad",
+      "year": "2026",
+      "journal": "bioRxiv",
+      "doi": "",
+      "link": "https://www.biorxiv.org/content/10.64898/2026.10.02.756215v1",
+      "tags": []
+    },
+    {
       "title": "BindCORE: Biophysical Ensemble Learning for Predicting Interaction Sites in Intrinsically Disordered Regions",
       "authors": "Nicolas Buton, Luiz Felipe Piochi, Hamed Khakzad",
       "year": "2026",
