@@ -4,7 +4,7 @@
     <title>DELTA @ Inria</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css?v=2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     
@@ -1553,7 +1553,7 @@
           (html.length - SHOWN_AUTHORS) + ' more</span>';
       }
 
-      fetch('data/publications.json')
+      fetch('data/publications.json', { cache: 'no-cache' })
         .then(function (r) { return r.json(); })
         .then(function (data) {
           var all = data.publications || [];

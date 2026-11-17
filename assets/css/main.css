@@ -4813,14 +4813,17 @@ section.wrapper.full-page .inner {
    PUBLICATIONS (year-grouped list, search, filters)
    ===================================================================== */
 #publications .inner {
-    padding: 0 20px 4rem 70px;
-    max-width: 1100px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;      /* same content width as the Team page */
+    margin: 0 auto;         /* centred, like the other pages */
+    padding: 0 2rem 6rem;   /* bottom space so the footer never covers the last entry */
+    box-sizing: border-box;
     text-align: left;
 }
 
 #publications .pubx-intro {
-    padding-top: 50px;
+    padding-top: 2.5rem;
+    text-align: center;
 }
 #publications .pubx-title {
     font-size: 1.75em;
@@ -4894,6 +4897,7 @@ section.wrapper.full-page .inner {
 #publications .pubx-chips {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: .4rem;
     margin-top: .6rem;
 }
@@ -5041,11 +5045,11 @@ section.wrapper.full-page .inner {
 }
 
 @media screen and (max-width: 736px) {
-    #publications .inner { padding: 0 20px 4rem 20px; }
-    #publications .pubx-intro { padding-top: 30px; }
+    #publications .inner { padding: 0 1rem 6rem; }
+    #publications .pubx-intro { padding-top: 1.5rem; }
     #publications .pubx-num { display: none; }
     #publications .pubx-sticky { position: static; padding-bottom: .4rem; }
-    #publications .pubx-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+    #publications .pubx-chips { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     #publications .pubx-chips::-webkit-scrollbar { display: none; }
     #publications .pubx-chip, #publications .pubx-chips .pubx-label { flex: 0 0 auto; white-space: nowrap; }
     #publications .pubx-count { margin-left: 0; flex-basis: 100%; }
