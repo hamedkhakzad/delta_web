@@ -16,7 +16,8 @@
       "links": {
         "email": "hamed.khakzad@inria.fr",
         "scholar": "https://scholar.google.com/citations?hl=en&user=GBxdoxAAAAAJ",
-        "linkedin": "https://www.linkedin.com/in/hamed-khakzad-91363466"
+        "linkedin": "https://www.linkedin.com/in/hamed-khakzad-91363466",
+        "orcid": "https://orcid.org/0000-0002-8556-0650"
       }
     },
     {
@@ -27,8 +28,9 @@
       "photo_position": "center 22%",
       "links": {
         "email": "yasaman.karami@inria.fr",
-        "twitter": "https://x.com/yasaman_karami",
-        "linkedin": "https://www.linkedin.com/in/yasaman-karami-70684231"
+        "scholar": "https://scholar.google.com/citations?user=j606i8oAAAAJ&hl=en",
+        "linkedin": "https://www.linkedin.com/in/yasaman-karami-70684231",
+        "website": "https://members.loria.fr/YKarami/cv/"
       }
     },
     {
@@ -39,7 +41,8 @@
       "photo": "images/opt/nb.webp",
       "photo_position": "center 30%",
       "links": {
-        "email": "nicolas.buton@inria.fr"
+        "email": "nicolas.buton@inria.fr",
+        "scholar": "https://scholar.google.com/citations?user=2i65pWwAAAAJ&hl=en"
       }
     },
     {
@@ -50,7 +53,8 @@
       "photo": "images/opt/jalim.webp",
       "photo_position": "center 30%",
       "links": {
-        "email": "jalim.singh@inria.fr"
+        "email": "jalim.singh@inria.fr",
+        "scholar": "https://scholar.google.com/citations?user=QyKE_A0AAAAJ&hl=en"
       }
     },
     {
@@ -62,6 +66,7 @@
       "photo_position": "42% 35%",
       "links": {
         "email": "omid.mokhtari@inria.fr",
+        "scholar": "https://scholar.google.com/citations?user=RlQNJgYAAAAJ&hl=en",
         "linkedin": "https://www.linkedin.com/in/omid-mokhtari-81a982131/"
       }
     },
@@ -74,7 +79,7 @@
       "photo_position": "center 30%",
       "links": {
         "email": "luiz-felipe.caparelli-piochi@inria.fr",
-        "twitter": "https://x.com/piochimico",
+        "scholar": "https://scholar.google.com/citations?user=WYLujtYAAAAJ&hl=en",
         "linkedin": "https://www.linkedin.com/in/luiz-piochi/",
         "website": "https://luizpiochi.com/"
       }
@@ -88,7 +93,8 @@
       "photo_position": "46% 40%",
       "photo_zoom": 1.35,
       "links": {
-        "email": "raul-jorge.carvalho-sofia@inria.fr"
+        "email": "raul-jorge.carvalho-sofia@inria.fr",
+        "scholar": "https://scholar.google.com/citations?user=ERxgLK4AAAAJ&hl=pt-PT"
       }
     },
     {
