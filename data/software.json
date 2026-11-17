@@ -1,0 +1,200 @@
+{
+  "_how_to_edit": "One entry per tool. Links with an empty 'url' are hidden until you fill them in. Link labels: Paper, Preprint, Conference paper, Code, Galaxy, Website, Docs.",
+  "tools": [
+    {
+      "name": "SIMORGH",
+      "image": "images/opt/research/logo_SIMORGH.webp",
+      "tagline": "Apo and cryptic ligand binding sites prediction with SIMORGH.",
+      "tags": [
+        "Binding sites",
+        "Conformational ensembles"
+      ],
+      "links": [
+        {
+          "label": "Conference paper",
+          "url": "",
+          "note": "SimBioChem Workshop at NeurIPS (2026)"
+        },
+        {
+          "label": "Preprint",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.10.02.756215v1",
+          "note": "bioRxiv (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://gitlab.inria.fr/delta/SIMORGH"
+        },
+        {
+          "label": "Galaxy",
+          "url": "https://usegalaxy.eu/?tool_id=simorgh"
+        }
+      ]
+    },
+    {
+      "name": "BindCORE",
+      "image": "images/opt/research/bindcore_logo.webp",
+      "tagline": "Ensemble-aware prediction of LIPs and MoRFs on disordered regions.",
+      "tags": [
+        "Disordered proteins",
+        "Binding sites"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.08.20.746047v1",
+          "note": "bioRxiv (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://gitlab.inria.fr/delta/bindcore"
+        }
+      ]
+    },
+    {
+      "name": "PROTEUS",
+      "image": "images/opt/research/logo_PROTEUS.webp",
+      "tagline": "Unraveling protein conformational plasticity with PROTEUS.",
+      "tags": [
+        "Conformational plasticity"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://www.biorxiv.org/content/10.64898/2026.04.27.721098v1",
+          "note": "bioRxiv (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/lupiochi/proteus"
+        }
+      ]
+    },
+    {
+      "name": "SURFACE-Bind",
+      "image": "images/opt/research/figure2_v2.webp",
+      "tagline": "Mapping targetable sites on the human surfaceome to enable large-scale protein binder design.",
+      "tags": [
+        "Protein design",
+        "Surfaceome"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://www.pnas.org/doi/10.1073/pnas.2506269123",
+          "note": "PNAS (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/hamedkhakzad/SURFACE-Bind"
+        },
+        {
+          "label": "Website",
+          "url": "https://surface-bind.inria.fr/"
+        }
+      ]
+    },
+    {
+      "name": "ppIRIS",
+      "image": "images/opt/research/Figure2_B.webp",
+      "tagline": "Deep learning framework for proteome-wide prediction of bacterial protein–protein interactions.",
+      "tags": [
+        "Protein–protein interactions"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://doi.org/10.1002/advs.202521310",
+          "note": "Advanced Science (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/lupiochi/ppIRIS"
+        }
+      ]
+    },
+    {
+      "name": "DynaRepo",
+      "image": "images/opt/research/Graphical_Abstract.webp",
+      "tagline": "Repository of macromolecular conformational dynamics for proteins, nucleic acids, and their complexes.",
+      "tags": [
+        "Database",
+        "Molecular dynamics"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://academic.oup.com/nar/article/54/D1/D393/8322558",
+          "note": "Nucleic Acids Research (2026)"
+        },
+        {
+          "label": "Website",
+          "url": "https://dynarepo.inria.fr/"
+        }
+      ]
+    },
+    {
+      "name": "DynamicGT",
+      "image": "images/opt/research/Graphical_Abstract_DynamicGT.webp",
+      "tagline": "Dynamic-aware geometric transformer for predicting protein binding interfaces in flexible and disordered regions.",
+      "tags": [
+        "Binding sites",
+        "Deep learning"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://www.cell.com/cell-systems/abstract/S2405-4712(25)00287-X",
+          "note": "Cell Systems (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/amisteromid/DynamicGT"
+        }
+      ]
+    },
+    {
+      "name": "COMPASS",
+      "image": "images/opt/research/jctcce-largecover.webp",
+      "tagline": "Communication Pathway Analysis within Protein–Nucleic Acid Complexes.",
+      "tags": [
+        "Allostery",
+        "Protein–nucleic acids"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://pubs.acs.org/doi/abs/10.1021/acs.jctc.5c00445",
+          "note": "J. Chem. Theory Comput. (2025)"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/yasamankarami/compass"
+        }
+      ]
+    },
+    {
+      "name": "InterMap",
+      "image": "images/opt/research/intermap.webp",
+      "tagline": "Accelerated Detection of Interaction Fingerprints on Large-Scale Molecular Ensembles.",
+      "tags": [
+        "Molecular dynamics",
+        "Interaction fingerprints"
+      ],
+      "links": [
+        {
+          "label": "Paper",
+          "url": "https://pubs.acs.org/doi/10.1021/acs.jctc.6c00083",
+          "note": "J. Chem. Theory Comput. (2026)"
+        },
+        {
+          "label": "Code",
+          "url": "https://github.com/rglez/intermap"
+        },
+        {
+          "label": "Docs",
+          "url": "https://rglez.github.io/intermap/"
+        }
+      ]
+    }
+  ]
+}

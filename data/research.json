@@ -1,0 +1,73 @@
+{
+  "_how_to_edit": "One entry per research theme. 'paragraphs' may contain simple HTML (links, <strong>). 'software' lists tool names from software.json.",
+  "themes": [
+    {
+      "title": "Dynamics-aware deep learning models",
+      "image": "images/opt/research/dyna.webp",
+      "alt": "Dynamics-aware deep learning for macromolecular complexes",
+      "summary": "Learning the conformational heterogeneity of macromolecules from molecular dynamics, to predict how they interact.",
+      "highlights": [
+        "DynaRepo: the first official MDDB node in France, hosting >5.5 billion frames for >700 macromolecular complexes",
+        "DynamicGT: the first dynamic-aware architecture for predicting protein binding sites"
+      ],
+      "paragraphs": [
+        "Our team aims to develop data-driven approaches capable of systematically learning the conformational heterogeneity of biological systems, to solve fundamental challenges that stem from static-based approaches. Such frameworks typically consist of multiple (task-specific) steps, including data generation, feature extraction, representation and encoding, and architecture design. The task at hand has a direct impact on the method of choice for each step. Our recent efforts in this direction led to DynaRepo and DynamicGT.",
+        "We established <a href=\"https://academic.oup.com/nar/article-abstract/54/D1/D393/8322558\" target=\"_blank\" rel=\"noopener\"><strong>DynaRepo</strong></a>, the first official MDDB node in France (second largest in Europe), hosting >5.5 billion frames for >700 macromolecular complexes (>1 ms of simulation time), including protein–protein and protein–nucleic acid assemblies. Each complex was simulated in triplicate for 500 ns, with pre-computed analyses (e.g., RMSD, SASA, correlations) to facilitate AI training.",
+        "Leveraging DynaRepo, we developed <a href=\"https://authors.elsevier.com/a/1mJab_siQzoTA-\" target=\"_blank\" rel=\"noopener\"><strong>DynamicGT</strong></a>, the first dynamic-aware architecture for the prediction of protein binding sites. It is a novel geometric-transformer architecture that captures the conformational heterogeneity of proteins for residue classification of binding sites. Inspired by the principles of cooperative graph neural networks, DynamicGT enables dynamic message passing between surface and core atoms, where a geometric transformer imposes strict message-passing constraints to predict binding-site probabilities."
+      ],
+      "software": [
+        "DynaRepo",
+        "DynamicGT"
+      ]
+    },
+    {
+      "title": "Enhanced data-driven protein design",
+      "image": "images/opt/research/design.webp",
+      "alt": "Enhanced data-driven therapeutic design",
+      "summary": "Large-scale, data-driven design of protein binders against therapeutic targets.",
+      "highlights": [
+        "The entire human surfaceome: 2,886 protein targets and ~4,500 predicted binding sites",
+        "640,000 fragment seeds, equivalent to ~3 billion protein–protein docking calculations"
+      ],
+      "paragraphs": [
+        "We are actively contributing to innovative frameworks for synthetic biology and protein design. One of the aims of our team is to develop a framework for large-scale protein binder design with high specificity and affinity toward the target. Our effort in this direction so far led to the <a href=\"https://www.pnas.org/doi/10.1073/pnas.2506269123\" target=\"_blank\" rel=\"noopener\"><strong>SURFACE-Bind</strong></a> database, an interactive web server that gives researchers access to detailed data on the human surfaceome, facilitating the design of next-generation therapeutics.",
+        "We introduced a large-scale computational resource coupled with an enhanced experimental framework for de novo protein binder design. Our approach targeted the entire human surfaceome (2,886 protein targets), a critical class of therapeutic targets, paving the way for new protein-based therapeutics. Leveraging a surface-based geometric convolutional neural network, we systematically evaluated the entire human surfaceome, identifying ~4,500 binding sites and targeting them with a library of 640,000 small fragments (seeds), equivalent to performing 3 billion protein–protein docking calculations. We provided detailed insights into the targetability of each predicted binding interface and suggested a high-quality set of binder seeds to support future target-specific protein design approaches."
+      ],
+      "software": [
+        "SURFACE-Bind"
+      ]
+    },
+    {
+      "title": "Allosteric communication in macromolecular complexes",
+      "image": "images/opt/research/compass.webp",
+      "alt": "ComPASS communication pathway analysis",
+      "summary": "How signals propagate through protein and nucleic-acid assemblies.",
+      "highlights": [
+        "ComPASS: dynamics-informed communication networks spanning proteins and nucleic acids",
+        "Diverse mechanisms of allosteric signal transmission in protein–protein and protein–nucleic acid systems"
+      ],
+      "paragraphs": [
+        "Allostery relies on long-range communication networks that connect distant functional regions within macromolecular assemblies. While extensively studied in proteins, the role of nucleic acids in these communication pathways remains poorly understood. We developed <a href=\"https://pubs.acs.org/doi/abs/10.1021/acs.jctc.5c00445\" target=\"_blank\" rel=\"noopener\"><strong>ComPASS</strong></a>, a large-scale, dynamics-informed computational framework that integrates molecular dynamics simulations to construct weighted inter-residue communication networks spanning proteins and nucleic acids.",
+        "By combining dynamical correlations, interactions, and spatial relationships, ComPASS reveals how signals propagate across complex assemblies. Our analyses uncover diverse mechanisms of allosteric signal transmission in protein–protein and protein–nucleic acid systems, providing new insights into the dynamic principles governing molecular function."
+      ],
+      "software": [
+        "COMPASS"
+      ]
+    },
+    {
+      "title": "Machine learning-guided integrative structural biology and host–pathogen interactions",
+      "image": "images/opt/research/gas.webp",
+      "alt": "Integrative structural biology and host–pathogen interactions",
+      "summary": "Applying our methods to real biological problems, together with experimental collaborators.",
+      "highlights": [
+        "Three application strategies: antimicrobial resistance, therapeutic binder design, and the dynamics of large complexes",
+        "Systems we study: Streptococcus pyogenes, type IV pili, and Shigella IpaA"
+      ],
+      "paragraphs": [
+        "The aim of the Delta team in this part is to perform research that can be applied to real, ongoing biological problems. Accordingly, we actively collaborate with national and international groups (mostly experimental biologists) to further evaluate our scientific developments in practice. The application part of our research follows three main strategies: first, antimicrobial resistance (AMR), toward elucidating the molecular complexes that are necessary for viral or bacterial survival and infection; second, designing novel protein binders (peptides or proteins) with therapeutic potential; and third, elucidating the dynamic behavior of large macromolecular complexes.",
+        "More specifically, we study the mechanisms of survival and infection in <strong>Streptococcus pyogenes</strong>, the dynamic behavior of <strong>type IV pili</strong> across various bacterial species, and the interactions of <strong>Shigella</strong> IpaA with human focal adhesion proteins."
+      ],
+      "software": []
+    }
+  ]
+}

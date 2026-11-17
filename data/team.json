@@ -1,0 +1,153 @@
+{
+  "_how_to_edit": "Add or edit people below. 'group' must match one of the names in 'groups'. Links are optional (email, scholar, linkedin, twitter, github, orcid, website). Move someone to 'alumni' when they leave.",
+  "team_photo": "",
+  "groups": [
+    "Principal investigators",
+    "Postdocs",
+    "PhD candidates"
+  ],
+  "current": [
+    {
+      "name": "Hamed Khakzad",
+      "role": "Junior Professor, HDR",
+      "group": "Principal investigators",
+      "photo": "images/opt/hamed.webp",
+      "photo_position": "center 30%",
+      "links": {
+        "email": "hamed.khakzad@inria.fr",
+        "scholar": "https://scholar.google.com/citations?hl=en&user=GBxdoxAAAAAJ",
+        "linkedin": "https://www.linkedin.com/in/hamed-khakzad-91363466"
+      }
+    },
+    {
+      "name": "Yasaman Karami",
+      "role": "Chargée de recherche Inria",
+      "group": "Principal investigators",
+      "photo": "images/opt/yasaman.webp",
+      "photo_position": "center 22%",
+      "links": {
+        "email": "yasaman.karami@inria.fr",
+        "twitter": "https://x.com/yasaman_karami",
+        "linkedin": "https://www.linkedin.com/in/yasaman-karami-70684231"
+      }
+    },
+    {
+      "name": "Nicolas Buton",
+      "role": "Postdoc",
+      "group": "Postdocs",
+      "dates": "Dec 2025 – Present",
+      "photo": "images/opt/nb.webp",
+      "photo_position": "center 30%",
+      "links": {
+        "email": "nicolas.buton@inria.fr"
+      }
+    },
+    {
+      "name": "Jalim Singh",
+      "role": "Postdoc",
+      "group": "Postdocs",
+      "dates": "Jan 2026 – Present",
+      "photo": "images/opt/jalim.webp",
+      "photo_position": "center 30%",
+      "links": {
+        "email": "jalim.singh@inria.fr"
+      }
+    },
+    {
+      "name": "Omid Mokhtari",
+      "role": "PhD candidate",
+      "group": "PhD candidates",
+      "dates": "Oct 2023 – Present",
+      "photo": "images/opt/omid.webp",
+      "photo_position": "42% 35%",
+      "links": {
+        "email": "omid.mokhtari@inria.fr",
+        "linkedin": "https://www.linkedin.com/in/omid-mokhtari-81a982131/"
+      }
+    },
+    {
+      "name": "Luiz Felipe Piochi",
+      "role": "PhD candidate",
+      "group": "PhD candidates",
+      "dates": "Sep 2024 – Present",
+      "photo": "images/opt/luiz.webp",
+      "photo_position": "center 30%",
+      "links": {
+        "email": "luiz-felipe.caparelli-piochi@inria.fr",
+        "twitter": "https://x.com/piochimico",
+        "linkedin": "https://www.linkedin.com/in/luiz-piochi/",
+        "website": "https://luizpiochi.com/"
+      }
+    },
+    {
+      "name": "Raul Jorge Carvalho Sofia",
+      "role": "PhD candidate",
+      "group": "PhD candidates",
+      "dates": "Oct 2026 – Present",
+      "photo": "images/opt/raul.webp",
+      "photo_position": "46% 40%",
+      "photo_zoom": 1.35,
+      "links": {
+        "email": "raul-jorge.carvalho-sofia@inria.fr"
+      }
+    },
+    {
+      "name": "Victor Pryakhin",
+      "role": "Shared PhD candidate",
+      "group": "PhD candidates",
+      "dates": "Oct 2023 – Present",
+      "photo": "images/opt/victor.webp",
+      "photo_position": "center 30%",
+      "links": {
+        "email": "victor.pryakhin@inria.fr",
+        "linkedin": "https://www.linkedin.com/in/victor-pryakhin-7a2695211"
+      }
+    },
+    {
+      "name": "Margot Weber",
+      "role": "Shared PhD candidate",
+      "group": "PhD candidates",
+      "dates": "Sep 2023 – Present",
+      "photo": "images/opt/margot.webp",
+      "photo_position": "50% 38%",
+      "links": {
+        "email": "margot.weber@ibs.fr",
+        "linkedin": "https://www.linkedin.com/in/margot-weber-5a4417263"
+      }
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Sneha Bheemireddy",
+      "role": "Postdoc"
+    },
+    {
+      "name": "Roy González-Alemán",
+      "role": "Postdoc"
+    },
+    {
+      "name": "Ishola Abeeb Akinwumi",
+      "role": "MSc internship"
+    },
+    {
+      "name": "Alireza Norouzi",
+      "role": "M1 internship"
+    },
+    {
+      "name": "Yu Tian",
+      "role": "BSc internship"
+    }
+  ],
+  "open_positions": [
+    {
+      "title": "Postdoctoral researcher",
+      "description": "Expertise in deep learning and structural bioinformatics.",
+      "contact": "hamed.khakzad@inria.fr"
+    },
+    {
+      "title": "PhD candidate",
+      "description": "Experience in deep learning.",
+      "contact": "yasaman.karami@inria.fr"
+    }
+  ]
+}
