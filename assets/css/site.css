@@ -168,9 +168,7 @@ select.field {
 .toolbar-sticky .chips + .chips { margin-top: .4rem; }
 
 /* 4a. HOME ----------------------------------------------------------- */
-.hero { text-align: center; padding-top: 1rem; }
-.network { width: 100%; max-width: 800px; height: 280px; margin: 0 auto 1rem; position: relative; }
-.network canvas { width: 100%; height: 100%; display: block; }
+.hero { text-align: center; padding-top: 2.2rem; }
 .hero h1 { font-size: 2.7rem; margin-bottom: .35rem; color: #4a4a4a; }
 .hero .tagline { font-size: 1.15rem; font-weight: 600; color: var(--muted); margin: 0 auto 1rem; max-width: 60ch; text-wrap: balance; }
 .hero .mission { max-width: 62ch; margin: 0 auto 1.5rem; }
@@ -257,8 +255,8 @@ select.field {
 .news-body h3 { font-size: 1.12rem; margin: 0 0 .35rem; display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; }
 .news-body p { margin: 0 0 .6rem; max-width: 76ch; }
 .thumbs { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: .4rem; }
-.thumb { padding: 0; border: 0; background: var(--soft); border-radius: 10px; overflow: hidden; cursor: zoom-in; width: 180px; height: 130px; }
-.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .25s; }
+.thumb { padding: 0; border: 0; background: var(--soft); border-radius: 10px; overflow: hidden; cursor: zoom-in; height: 130px; }
+.thumb img { height: 100%; width: auto; max-width: 240px; object-fit: cover; display: block; transition: transform .25s; }
 .thumb:hover img { transform: scale(1.04); }
 
 /* 4g. CONTACT -------------------------------------------------------- */
@@ -308,8 +306,7 @@ select.field {
   .nav a { letter-spacing: .16em; }
   .page-title { font-size: 1.75rem; }
   .hero h1 { font-size: 2rem; }
-  .network { height: 150px; }
-  .stats { gap: .6rem; }
+    .stats { gap: .6rem; }
   .stat b { font-size: 1.5rem; }
   .tool { grid-template-columns: 1fr; gap: 1rem; }
   .tool-img { height: 150px; }

@@ -2,6 +2,30 @@
   "_how_to_edit": "Newest first. 'date' is YYYY-MM. 'tag' is one of Paper, Award, Funding, Event, Press (new tags appear automatically). 'text' may contain simple HTML links. Optional 'images': [{src, alt}].",
   "news": [
     {
+      "date": "2026-11",
+      "tag": "Press",
+      "title": "Yasaman featured in “Elles font le numérique” #39",
+      "text": "Congratulations to Yasaman for being featured in episode #39 of “Elles font le numérique” (Women Shaping the Digital World), Inria’s portrait series. She talks about her research on protein dynamics. <a href=\"https://www.inria.fr/fr/elles-font-le-numerique-39-yasaman-karami-specialiste-de-la-dynamique-des-proteines\" rel=\"noopener noreferrer\" target=\"_blank\">Read the article (in French)</a>.",
+      "images": [
+        {
+          "src": "images/opt/news/2026/elles_numerique_39.webp",
+          "alt": "Yasaman Karami in the “Elles font le numérique” #39 episode banner"
+        }
+      ]
+    },
+    {
+      "date": "2026-11",
+      "tag": "Award",
+      "title": "DynaRepo receives an Open Science Award",
+      "text": "Congratulations to Yasaman and all the team members who contributed to DynaRepo, which received an Open Science Award (Prix Science Ouverte). DynaRepo is an open dataset of molecular dynamics simulations that lets anyone explore how proteins and nucleic acids move. <a href=\"https://inria.fr/fr/dynarepo-donnees-ouvertes-explorer-dynamique-proteines\" rel=\"noopener noreferrer\" target=\"_blank\">Learn more (in French)</a>.",
+      "images": [
+        {
+          "src": "images/opt/news/2026/prix_science_ouverte.webp",
+          "alt": "Yasaman Karami holding the Open Science Award, with two members of the award committee"
+        }
+      ]
+    },
+    {
       "date": "2026-10",
       "tag": "Award",
       "title": "Best Poster Award for Omid",
@@ -86,6 +110,12 @@
       "tag": "Paper",
       "title": "Collaboration with Goethe University Frankfurt published in Science Advances",
       "text": "We are happy to announce that the results of our nice collaboration with Christoph Welsch (Goethe University Frankfurt) is now published in <a href=\"https://www.science.org/doi/full/10.1126/sciadv.aeb8863?af=R\"><strong>Science Advances</strong></a>. Congratulations to all authors for this amazing story."
+    },
+    {
+      "date": "2026-03",
+      "tag": "Event",
+      "title": "“Sciences, un métier de femmes” – Femmes & Sciences day",
+      "text": "Congratulations to Yasaman and her colleagues at the Université de Lorraine for organizing the “Sciences, un métier de femmes” (Science, a career for women) day, which welcomed around 250 high-school girls from 13 schools across Lorraine to discover scientific careers. <a href=\"https://iww.inria.fr/NanSciNum/encourageons-les-vocations-scientifiques-chez-les-lyceennes/\" rel=\"noopener noreferrer\" target=\"_blank\">Event details (in French)</a>."
     },
     {
       "date": "2026-03",
