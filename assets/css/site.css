@@ -168,7 +168,7 @@ select.field {
 .toolbar-sticky .chips + .chips { margin-top: .4rem; }
 
 /* 4a. HOME ----------------------------------------------------------- */
-.hero { text-align: center; padding-top: 2.2rem; }
+.hero { text-align: center; padding-top: 4.5rem; }
 .hero h1 { font-size: 2.7rem; margin-bottom: .35rem; color: #4a4a4a; }
 .hero .tagline { font-size: 1.15rem; font-weight: 600; color: var(--muted); margin: 0 auto 1rem; max-width: 60ch; text-wrap: balance; }
 .hero .mission { max-width: 62ch; margin: 0 auto 1.5rem; }
@@ -305,6 +305,7 @@ select.field {
   .brand img { height: 42px; }
   .nav a { letter-spacing: .16em; }
   .page-title { font-size: 1.75rem; }
+  .hero { padding-top: 2.5rem; }
   .hero h1 { font-size: 2rem; }
     .stats { gap: .6rem; }
   .stat b { font-size: 1.5rem; }
