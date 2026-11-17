@@ -47,17 +47,16 @@
     },
     {
       "title": "Structural basis of the two-photon photoactivation mechanism of orange carotenoid protein",
-      "authors": "Rory J.L. Munro,  Elena A. Andreeva, Elisabeth Hartmann,  Quentin Goor,  Hosni El Zein,  Stanislaw Nizinski,  Adjele Wilson,  Elke De Zitter,  Gregory Effantin,  Nicolas Coquelle,  Ninon Zala,  Martin V. Appleby, Shira Bar-Zvi,  Camila Bacellar,  Emma Beale,  Emmanuelle Bignon,  Bernhard Brutscher,  Martin Byrdin,  Claudio Cirelli,  Florian Dworkowski, Lutz Foucar,  Guillaume Gotthard,  Alexander Gorel, Marie Luise Grunbein,  Mario Hilpert,  Philip J.M. Johnson,  Marco Kloos,  Gregory Knoop,  Karol Nass, Gabriella Nass Kovacs,  Dmitry Ozerov,  Christopher J. Milne, Gotard Burdinski,  Christophe Chipot,  Yasaman Karami,  Francois Dehez,  Martin Weik,  R. Bruce Doak,  Robert L. Shoeman,  Giorgio Schiro,  Michel Sliwa,  Diana Kirilovsky,  Ilme Schlichting,  Jacques-Philippe Colletier",
+      "authors": "Rory J.L. Munro, Elena A. Andreeva, Elisabeth Hartmann, Quentin Goor, Hosni El Zein, Stanislaw Nizinski, Adjele Wilson, Elke De Zitter, Gregory Effantin, Nicolas Coquelle, Ninon Zala, Martin V. Appleby, Shira Bar-Zvi, Camila Bacellar, Emma Beale, Emmanuelle Bignon, Bernhard Brutscher, Martin Byrdin, Claudio Cirelli, Florian Dworkowski, Lutz Foucar, Guillaume Gotthard, Alexander Gorel, Marie Luise Grunbein, Mario Hilpert, Philip J.M. Johnson, Marco Kloos, Gregory Knoop, Karol Nass, Gabriella Nass Kovacs, Dmitry Ozerov, Christopher J. Milne, Gotard Burdinski, Christophe Chipot, Yasaman Karami, Francois Dehez, Martin Weik, R. Bruce Doak, Robert L. Shoeman, Giorgio Schiro, Michel Sliwa, Diana Kirilovsky, Ilme Schlichting, Jacques-Philippe Colletier",
       "year": "2026",
       "journal": "bioRxiv",
       "doi": "",
       "link": "https://www.biorxiv.org/content/10.64898/2026.04.21.718960v1.abstract",
       "tags": []
     },
-
     {
       "title": "Phospholipid-driven conformational switching of HCV NS5A links protein folding to replication membrane remodeling",
-      "authors": "Anna V. Bulankina, Rebecca M. Richter, James H. Nettles, Daisuke Yamane, Christian Grimm, Yasaman Karami, Richard A. Stanton,  Bianca Introini, Jonas Hermann, Hanaa Charif, Mia S. König, Claudia Stroß, Cristina Ortiz, Nico Kraus, Daniel Wood, Facundo Galceran, Rupert Abele, Bernard Maigret,  Raymond F. Schinazi,  Stefan Zeuzem, Ricardo M. Biondi,  MinKyung Yi, Robert Tampé,  Mikhail Kudryashev, Christoph Welsch",
+      "authors": "Anna V. Bulankina, Rebecca M. Richter, James H. Nettles, Daisuke Yamane, Christian Grimm, Yasaman Karami, Richard A. Stanton, Bianca Introini, Jonas Hermann, Hanaa Charif, Mia S. König, Claudia Stroß, Cristina Ortiz, Nico Kraus, Daniel Wood, Facundo Galceran, Rupert Abele, Bernard Maigret, Raymond F. Schinazi, Stefan Zeuzem, Ricardo M. Biondi, MinKyung Yi, Robert Tampé, Mikhail Kudryashev, Christoph Welsch",
       "year": "2026",
       "journal": "Science Advances",
       "doi": "",
@@ -90,7 +89,7 @@
       "doi": "",
       "link": "https://authors.elsevier.com/a/1mJab_siQzoTA-",
       "tags": []
-    },    
+    },
     {
       "title": "DynaRepo: the repository of macromolecular conformational dynamics",
       "authors": "Omid Mokhtari, Emmanuelle Bignon, Hamed Khakzad, Yasaman Karami",
@@ -209,7 +208,7 @@
       "tags": []
     },
     {
-      "title": "Histone H3 as a redox switch in the nucleosome core particle: insights from molecular modeling†",
+      "title": "Histone H3 as a redox switch in the nucleosome core particle: insights from molecular modeling",
       "authors": "Yasaman Karami, Roy González, Mailys Duch, Yuya Qiu, Yani Kedjar, Emmanuelle Bignon",
       "year": "2024",
       "journal": "bioRxiv",
@@ -353,15 +352,6 @@
       "tags": []
     },
     {
-      "title": "Structural determination of Streptococcus pyogenes M1 protein interactions with human immunoglobulin G using integrative structural biology",
-      "authors": "Hamed Khakzad, Lotta Happonen, Yasaman Karami, Sounak Chowdhury, Gizem Ertürk Bergdahl, ..., Johan Malmström, Lars Malmström",
-      "year": "2021",
-      "journal": "PLoS Computational Biology",
-      "doi": "",
-      "link": "https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1008169",
-      "tags": []
-    },
-    {
       "title": "Computational and biochemical analysis of type IV pilus dynamics and stability",
       "authors": "Yasaman Karami, Aracelys López, Andrea Ori, Lee Thomassin, Benjamin Bardiaux, ..., Olivera Francetic, Michael Nilges",
       "year": "2021",
@@ -452,7 +442,7 @@
       "tags": []
     },
     {
-      "title": "“Infostery” analysis of short molecular dynamics simulations identifies highly sensitive residues and predicts deleterious mutations",
+      "title": "Infostery” analysis of short molecular dynamics simulations identifies highly sensitive residues and predicts deleterious mutations",
       "authors": "Yasaman Karami, Tristan Bitard, Elodie Laine, Alessandra Carbone",
       "year": "2018",
       "journal": "Scientific Reports",
@@ -461,7 +451,7 @@
       "tags": []
     },
     {
-      "title": "“Dissecting protein architecture with communication blocks and communicating segment pairs",
+      "title": "Dissecting protein architecture with communication blocks and communicating segment pairs",
       "authors": "Yasaman Karami, Elodie Laine, Alessandra Carbone",
       "year": "2016",
       "journal": "BMC Bioinformatics",

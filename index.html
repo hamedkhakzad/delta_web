@@ -771,10 +771,24 @@
         <!-- Publications Section -->
         <section id="publications" class="section">
             <div class="inner">
-                <ul id="pub-list">
-                <!-- Publication list items will be injected here -->
-                </ul>
-            <!-- <p><strong>L. F. Piochi</strong>, D. Tang, J. Malmström, <strong>Y. Karami</strong>, <strong>H. Khakzad</strong>, "ppIRIS: deep learning for proteome-wide prediction of bacterial protein-protein interactions." bioRxiv (2025)</p> -->
+                <div class="pubx-intro">
+                    <h2 class="pubx-title">Publications</h2>
+                    <p class="pubx-stats" id="pubx-stats"></p>
+                </div>
+
+                <div class="pubx-sticky">
+                    <div class="pubx-toolbar">
+                        <input id="pubx-search" type="search" placeholder="Search title, author, journal…" aria-label="Search publications" autocomplete="off">
+                        <select id="pubx-journal" aria-label="Filter by journal">
+                            <option value="">All journals &amp; venues</option>
+                        </select>
+                        <span class="pubx-count" id="pubx-count" aria-live="polite"></span>
+                    </div>
+                    <div class="pubx-chips" id="pubx-types" aria-label="Filter by type"></div>
+                    <div class="pubx-chips" id="pubx-years" aria-label="Jump to year"></div>
+                </div>
+
+                <div id="pubx-list"></div>
             </div>
         </section>
     
@@ -1490,65 +1504,204 @@
     });
     </script>
     <script>
-    // When DOM is ready, load publications.json and build the publication list.
-    document.addEventListener('DOMContentLoaded', function() {
+    // Publications: loads data/publications.json, groups by year, adds search + filters.
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // ---- Settings you may want to edit -------------------------------------
+      // Team members are shown in bold. Add new members here.
+      var TEAM = /^(Hamed Khakzad|Yasaman Karami|Omid Mokhtari|Luiz Felipe Piochi|Sneha Bheemireddy|Ishola Abeeb Akinwumi|Roy González(?:[- ]Alem[aá]n)?|Nicolas Buton|Victor Pryakhin|Jalim Singh)$/;
+      // Long author lists are collapsed after this many names.
+      var MAX_AUTHORS = 10, SHOWN_AUTHORS = 6;
+      // ------------------------------------------------------------------------
+
+      var root = document.getElementById('publications');
+      var listEl = document.getElementById('pubx-list');
+      if (!listEl) return;
+      var yearsEl = document.getElementById('pubx-years');
+      var typesEl = document.getElementById('pubx-types');
+      var searchEl = document.getElementById('pubx-search');
+      var journalEl = document.getElementById('pubx-journal');
+      var countEl = document.getElementById('pubx-count');
+      var statsEl = document.getElementById('pubx-stats');
+
+      var TYPE_LABELS = { journal: 'Journal articles', preprint: 'Preprints', workshop: 'Workshops & chapters' };
+      var state = { q: '', journal: '', type: '' };
+      var pubs = [];
+
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      function typeOf(p) {
+        var j = p.journal || '';
+        if (/rxiv|preprint/i.test(j)) return 'preprint';
+        if (/workshop|symposium|conference|proceedings|chapter|macromolecular protein complexes/i.test(j)) return 'workshop';
+        return 'journal';
+      }
+
+      function authorsHTML(str) {
+        var names = String(str || '').split(',').map(function (s) { return s.trim(); }).filter(Boolean);
+        var html = names.map(function (n) {
+          return TEAM.test(n) ? '<strong>' + esc(n) + '</strong>' : esc(n);
+        });
+        if (html.length <= MAX_AUTHORS) return html.join(', ');
+        return html.slice(0, SHOWN_AUTHORS).join(', ') +
+          '<span class="pubx-more" hidden>, ' + html.slice(SHOWN_AUTHORS).join(', ') + '</span>' +
+          ' <span class="pubx-toggle" role="button" tabindex="0" aria-expanded="false">… +' +
+          (html.length - SHOWN_AUTHORS) + ' more</span>';
+      }
+
       fetch('data/publications.json')
-        .then(response => response.json())
-        .then(data => {
-          const pubList = document.getElementById('pub-list');
-          const totalPubs = data.publications.length;
-          
-          data.publications.forEach((pub, index) => {
-            // Create a publication list item.
-            const listItem = document.createElement('li');
-            listItem.className = 'pub-item';
-            listItem.style.textAlign = 'left';
-            
-            // Create publication entry with reversed numbering
-            const pubEl = document.createElement('p');
-            pubEl.style.textAlign = 'left';
-            const pubNumber = totalPubs - index;
-            let pubHTML = `(${pubNumber}) `;
-            
-            // Authors with bold formatting for team members
-            pubHTML += `${pub.authors.replace(/Hamed Khakzad|Yasaman Karami|Omid Mokhtari|Luiz Felipe Piochi|Sneha Bheemireddy|Ishola Abeeb Akinwumi|Roy González Aleman|Nicolas Buton|Victor Pryakhin|Jalim Singh/g, '<strong>$&</strong>')}, `;
-            
-            // Title with link if available
-            if (pub.link) {
-              pubHTML += `"<a href="${pub.link}" target="_blank" class="pub-link">${pub.title}</a>." `;
-            } else {
-              pubHTML += `"${pub.title}." `;
-            }
-            
-            // Journal and Year
-            if (pub.journal) {
-              pubHTML += `<strong>${pub.journal}</strong> (${pub.year})`;
-            } else {
-              pubHTML += `(${pub.year})`;
-            }
-            
-            // DOI link if available
-            if (pub.doi) {
-              pubHTML += `, <a href="https://doi.org/${pub.doi}" target="_blank" class="pub-link">Link</a>`;
-            }
-            
-            pubHTML += `.`;
-            pubEl.innerHTML = pubHTML;
-            listItem.appendChild(pubEl);
-            
-            // DOI icon if available
-            if (pub.doi) {
-              const doiEl = document.createElement('div');
-              doiEl.innerHTML = pub.doi;
-              doiEl.style.textAlign = 'left';
-              listItem.appendChild(doiEl);
-            }
-            
-            pubList.appendChild(listItem);
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var all = data.publications || [];
+          var total = all.length;
+          // Keep the original numbering: first entry in the file = highest number.
+          pubs = all.map(function (p, i) {
+            return Object.assign({}, p, { num: total - i, type: typeOf(p), order: i });
           });
+          // Newest year first; within a year keep the order of the JSON file.
+          pubs.sort(function (a, b) { return (Number(b.year) - Number(a.year)) || (a.order - b.order); });
+
+          // Header stats
+          var years = pubs.map(function (p) { return Number(p.year); }).filter(Boolean);
+          var venues = {}; pubs.forEach(function (p) { if (p.journal) venues[p.journal] = 1; });
+          statsEl.textContent = total + ' publications · ' + Math.min.apply(null, years) + '–' +
+            Math.max.apply(null, years) + ' · ' + Object.keys(venues).length + ' journals & venues';
+
+          // Journal dropdown (with counts)
+          var counts = {};
+          pubs.forEach(function (p) { if (p.journal) counts[p.journal] = (counts[p.journal] || 0) + 1; });
+          Object.keys(counts).sort(function (a, b) { return a.localeCompare(b); }).forEach(function (j) {
+            var o = document.createElement('option');
+            o.value = j; o.textContent = j + ' (' + counts[j] + ')';
+            journalEl.appendChild(o);
+          });
+
+          // Type chips (only types that exist)
+          var typeCounts = {};
+          pubs.forEach(function (p) { typeCounts[p.type] = (typeCounts[p.type] || 0) + 1; });
+          var chips = '<span class="pubx-chip is-active" role="button" tabindex="0" data-type="">All<span class="n">' + total + '</span></span>';
+          ['journal', 'preprint', 'workshop'].forEach(function (t) {
+            if (typeCounts[t]) chips += '<span class="pubx-chip" role="button" tabindex="0" data-type="' + t + '">' +
+              TYPE_LABELS[t] + '<span class="n">' + typeCounts[t] + '</span></span>';
+          });
+          typesEl.innerHTML = chips;
+
+          searchEl.addEventListener('input', function () { state.q = searchEl.value.trim().toLowerCase(); render(); });
+          journalEl.addEventListener('change', function () { state.journal = journalEl.value; render(); });
+          typesEl.addEventListener('click', onTypeClick);
+          typesEl.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onTypeClick(e); } });
+          yearsEl.addEventListener('click', onYearClick);
+          yearsEl.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); onYearClick(e); } });
+          listEl.addEventListener('click', onToggle);
+          listEl.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { onToggle(e); } });
+
+          render();
         })
-        .catch(error => console.error('Error loading publications:', error));
+        .catch(function (err) {
+          console.error('Error loading publications:', err);
+          listEl.innerHTML = '<p class="pubx-empty">Publications could not be loaded.</p>';
+        });
+
+      function onTypeClick(e) {
+        var chip = e.target.closest('.pubx-chip');
+        if (!chip) return;
+        state.type = chip.getAttribute('data-type') || '';
+        Array.prototype.forEach.call(typesEl.querySelectorAll('.pubx-chip'), function (c) {
+          c.classList.toggle('is-active', c === chip);
+        });
+        render();
+      }
+
+      // The site uses #hash links for switching sections, so year chips scroll
+      // inside the section instead of changing the URL hash.
+      function onYearClick(e) {
+        var chip = e.target.closest('.pubx-chip');
+        if (!chip) return;
+        var target = document.getElementById('pubx-year-' + chip.getAttribute('data-year'));
+        if (!target) return;
+        var sticky = root.querySelector('.pubx-sticky');
+        var top = target.getBoundingClientRect().top - root.getBoundingClientRect().top + root.scrollTop - (sticky ? sticky.offsetHeight : 0) - 8;
+        root.scrollTo({ top: top, behavior: 'smooth' });
+      }
+
+      function onToggle(e) {
+        var t = e.target.closest('.pubx-toggle');
+        if (!t) return;
+        e.preventDefault();
+        var more = t.parentNode.querySelector('.pubx-more');
+        var open = more.hasAttribute('hidden');
+        if (open) more.removeAttribute('hidden'); else more.setAttribute('hidden', '');
+        t.setAttribute('aria-expanded', open ? 'true' : 'false');
+        t.textContent = open ? 'show less' : t.getAttribute('data-label');
+      }
+
+      function render() {
+        var shown = pubs.filter(function (p) {
+          if (state.journal && p.journal !== state.journal) return false;
+          if (state.type && p.type !== state.type) return false;
+          if (state.q) {
+            var hay = [p.title, p.authors, p.journal, p.year, (p.tags || []).join(' ')].join(' ').toLowerCase();
+            return state.q.split(/\s+/).every(function (w) { return hay.indexOf(w) !== -1; });
+          }
+          return true;
+        });
+
+        countEl.textContent = shown.length === pubs.length
+          ? shown.length + ' publications'
+          : shown.length + ' of ' + pubs.length + ' publications';
+
+        var byYear = {}, order = [];
+        shown.forEach(function (p) {
+          if (!byYear[p.year]) { byYear[p.year] = []; order.push(p.year); }
+          byYear[p.year].push(p);
+        });
+
+        if (!shown.length) {
+          yearsEl.innerHTML = '';
+          listEl.innerHTML = '<p class="pubx-empty">No publications match your search.</p>';
+          return;
+        }
+
+        yearsEl.innerHTML = '<span class="pubx-label">Jump to</span>' + order.map(function (y) {
+          return '<span class="pubx-chip" role="button" tabindex="0" data-year="' + esc(y) + '">' + esc(y) + '<span class="n">' + byYear[y].length + '</span></span>';
+        }).join('');
+
+        listEl.innerHTML = order.map(function (y) {
+          var items = byYear[y].map(function (p) {
+            var title = p.link
+              ? '<a href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(p.title) + '</a>'
+              : esc(p.title);
+            var info = '';
+            if (p.journal) info += '<span class="pubx-venue">' + esc(p.journal) + '</span>';
+            info += '<span>' + esc(p.year) + '</span>';
+            if (p.type === 'preprint') info += '<span class="pubx-tag preprint">Preprint</span>';
+            (p.tags || []).forEach(function (t) { info += '<span class="pubx-tag">' + esc(t) + '</span>'; });
+            if (p.link) info += '<a class="pubx-badge" href="' + esc(p.link) + '" target="_blank" rel="noopener">Paper</a>';
+            if (p.doi) info += '<a class="pubx-badge alt" href="https://doi.org/' + esc(p.doi) + '" target="_blank" rel="noopener">DOI</a>';
+            return '<li class="pubx-item">' +
+              '<div class="pubx-num">' + p.num + '</div>' +
+              '<div class="pubx-body">' +
+                '<p class="pubx-item-title">' + title + '</p>' +
+                '<p class="pubx-authors">' + authorsHTML(p.authors) + '</p>' +
+                '<div class="pubx-info">' + info + '</div>' +
+              '</div></li>';
+          }).join('');
+          return '<section class="pubx-year" id="pubx-year-' + esc(y) + '">' +
+            '<h3 class="pubx-year-heading"><span class="year">' + esc(y) + '</span>' +
+            '<span class="n">' + byYear[y].length + ' publication' + (byYear[y].length > 1 ? 's' : '') + '</span></h3>' +
+            '<ul class="pubx-items">' + items + '</ul></section>';
+        }).join('');
+
+        // remember the collapsed label for each toggle
+        Array.prototype.forEach.call(listEl.querySelectorAll('.pubx-toggle'), function (t) {
+          t.setAttribute('data-label', t.textContent);
+        });
+      }
     });
-  </script>
+    </script>
 </body>
 </html>
