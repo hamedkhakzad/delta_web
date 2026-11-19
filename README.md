@@ -1,6 +1,6 @@
 # delta_web
 
-Website of the DELTA team at Inria. Plain HTML + CSS + JavaScript, no build step (works on GitHub Pages as is).
+Website of the DELTA team at Inria. **This readme file is to help team members to update the site.**
 
 ## How the site is organised
 
@@ -10,7 +10,7 @@ Website of the DELTA team at Inria. Plain HTML + CSS + JavaScript, no build step
 | All styles (colours, widths, fonts at the top) | `assets/css/site.css` |
 | All behaviour (tabs, search, filters, rendering) | `assets/js/site.js` |
 | Home-page animation | `assets/js/network.js` |
-| **Content you edit** | `data/*.json` |
+| **Content to edit** | `data/*.json` |
 
 Every tab except Contacts is filled from a JSON file. **To update the website, edit the JSON file and push – you do not need to touch the HTML.**
 
@@ -50,9 +50,6 @@ Browsers cache files. Increase the number in `?v=3` (in `index.html`, on `site.c
 python3 -m http.server 8000      # then open http://localhost:8000
 ```
 (Opening `index.html` by double-click does not work, because browsers block loading the JSON files from `file://`.)
-
-## Old template files (safe to remove once you are happy with the new site)
-`assets/css/main.css`, `assets/css/noscript.css`, `assets/sass/`, `assets/js/` (everything except `site.js` and `network.js`), `research.json` (old placeholder at the top level), `elements.html`, `generic.html`, `news.html`. Note that `news.html` still uses `main.css`.
 
 ## Notes
 Last website meeting May 7th 2025
